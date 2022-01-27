@@ -38,5 +38,24 @@ Public Class Iniciar_Sesion
     Private Sub Iniciar_Sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
+        CB_Usuarios.Text = "Seleccione un usuario"
+    End Sub
+
+    Private Sub PanelInferior_Paint(sender As Object, e As PaintEventArgs) Handles PanelInferior.Paint
+
+    End Sub
+
+    Private Sub ButtonAceptar_Click(sender As Object, e As EventArgs) Handles ButtonAceptar.Click
+        LabelTitulo.Text = "Daniel Aros"
+        LabelFacultad.Text = "21"
+        ButtonAceptar.Visible = False
+        ButtonRegresar.Visible = True
+    End Sub
+
+    Private Sub ButtonRegresar_Click(sender As Object, e As EventArgs) Handles ButtonRegresar.Click
+        LabelTitulo.Text = "Iniciar Sesión"
+        LabelFacultad.Text = "Facultad de Informática"
+        ButtonRegresar.Visible = False
+        ButtonAceptar.Visible = True
     End Sub
 End Class
