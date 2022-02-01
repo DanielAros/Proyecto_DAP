@@ -22,18 +22,25 @@ Partial Class Iniciar_Sesion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Iniciar_Sesion))
         Me.LabelTitulo = New System.Windows.Forms.Label()
         Me.LabelFacultad = New System.Windows.Forms.Label()
         Me.PanelBarraTitutlo = New System.Windows.Forms.Panel()
         Me.ButtonMinimizar = New System.Windows.Forms.Button()
         Me.ButtonSalir = New System.Windows.Forms.Button()
         Me.PanelInferior = New System.Windows.Forms.Panel()
-        Me.ButtonAceptar = New System.Windows.Forms.Button()
         Me.ButtonRegresar = New System.Windows.Forms.Button()
+        Me.ButtonAceptar = New System.Windows.Forms.Button()
         Me.CB_Usuarios = New System.Windows.Forms.ComboBox()
         Me.LabelUsuarios = New System.Windows.Forms.Label()
+        Me.PBLogo = New System.Windows.Forms.PictureBox()
+        Me.TxtPassword = New System.Windows.Forms.TextBox()
+        Me.LabelPassword = New System.Windows.Forms.Label()
+        Me.ButtonLogoAdm = New System.Windows.Forms.Button()
+        Me.LinkLabelPassword = New System.Windows.Forms.LinkLabel()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
+        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LabelTitulo
@@ -42,7 +49,7 @@ Partial Class Iniciar_Sesion
         Me.LabelTitulo.AutoSize = True
         Me.LabelTitulo.Font = New System.Drawing.Font("Niagara Engraved", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelTitulo.ForeColor = System.Drawing.Color.White
-        Me.LabelTitulo.Location = New System.Drawing.Point(69, 55)
+        Me.LabelTitulo.Location = New System.Drawing.Point(69, 131)
         Me.LabelTitulo.Name = "LabelTitulo"
         Me.LabelTitulo.Size = New System.Drawing.Size(120, 34)
         Me.LabelTitulo.TabIndex = 0
@@ -63,6 +70,7 @@ Partial Class Iniciar_Sesion
         'PanelBarraTitutlo
         '
         Me.PanelBarraTitutlo.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.PanelBarraTitutlo.Controls.Add(Me.ButtonLogoAdm)
         Me.PanelBarraTitutlo.Controls.Add(Me.ButtonMinimizar)
         Me.PanelBarraTitutlo.Controls.Add(Me.ButtonSalir)
         Me.PanelBarraTitutlo.Dock = System.Windows.Forms.DockStyle.Top
@@ -115,20 +123,6 @@ Partial Class Iniciar_Sesion
         Me.PanelInferior.Size = New System.Drawing.Size(257, 50)
         Me.PanelInferior.TabIndex = 3
         '
-        'ButtonAceptar
-        '
-        Me.ButtonAceptar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonAceptar.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.ButtonAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
-        Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
-        Me.ButtonAceptar.Location = New System.Drawing.Point(170, 15)
-        Me.ButtonAceptar.Name = "ButtonAceptar"
-        Me.ButtonAceptar.Size = New System.Drawing.Size(75, 24)
-        Me.ButtonAceptar.TabIndex = 0
-        Me.ButtonAceptar.Text = "Aceptar"
-        Me.ButtonAceptar.UseVisualStyleBackColor = True
-        '
         'ButtonRegresar
         '
         Me.ButtonRegresar.Cursor = System.Windows.Forms.Cursors.Hand
@@ -144,11 +138,25 @@ Partial Class Iniciar_Sesion
         Me.ButtonRegresar.UseVisualStyleBackColor = True
         Me.ButtonRegresar.Visible = False
         '
+        'ButtonAceptar
+        '
+        Me.ButtonAceptar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonAceptar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.ButtonAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.ButtonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonAceptar.ForeColor = System.Drawing.Color.White
+        Me.ButtonAceptar.Location = New System.Drawing.Point(170, 15)
+        Me.ButtonAceptar.Name = "ButtonAceptar"
+        Me.ButtonAceptar.Size = New System.Drawing.Size(75, 24)
+        Me.ButtonAceptar.TabIndex = 0
+        Me.ButtonAceptar.Text = "Aceptar"
+        Me.ButtonAceptar.UseVisualStyleBackColor = True
+        '
         'CB_Usuarios
         '
         Me.CB_Usuarios.FormattingEnabled = True
         Me.CB_Usuarios.Items.AddRange(New Object() {"Daniel Aros", "Elias Ramirez", "Maria Perez"})
-        Me.CB_Usuarios.Location = New System.Drawing.Point(27, 147)
+        Me.CB_Usuarios.Location = New System.Drawing.Point(28, 195)
         Me.CB_Usuarios.Name = "CB_Usuarios"
         Me.CB_Usuarios.Size = New System.Drawing.Size(208, 21)
         Me.CB_Usuarios.TabIndex = 4
@@ -159,11 +167,69 @@ Partial Class Iniciar_Sesion
         Me.LabelUsuarios.AutoSize = True
         Me.LabelUsuarios.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelUsuarios.ForeColor = System.Drawing.Color.White
-        Me.LabelUsuarios.Location = New System.Drawing.Point(24, 128)
+        Me.LabelUsuarios.Location = New System.Drawing.Point(25, 176)
         Me.LabelUsuarios.Name = "LabelUsuarios"
         Me.LabelUsuarios.Size = New System.Drawing.Size(64, 16)
         Me.LabelUsuarios.TabIndex = 5
         Me.LabelUsuarios.Text = "Usuarios"
+        '
+        'PBLogo
+        '
+        Me.PBLogo.BackgroundImage = CType(resources.GetObject("PBLogo.BackgroundImage"), System.Drawing.Image)
+        Me.PBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBLogo.Location = New System.Drawing.Point(85, 38)
+        Me.PBLogo.Name = "PBLogo"
+        Me.PBLogo.Size = New System.Drawing.Size(85, 75)
+        Me.PBLogo.TabIndex = 6
+        Me.PBLogo.TabStop = False
+        '
+        'TxtPassword
+        '
+        Me.TxtPassword.Location = New System.Drawing.Point(28, 252)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtPassword.Size = New System.Drawing.Size(208, 20)
+        Me.TxtPassword.TabIndex = 7
+        Me.TxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'LabelPassword
+        '
+        Me.LabelPassword.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelPassword.AutoSize = True
+        Me.LabelPassword.Font = New System.Drawing.Font("Mongolian Baiti", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPassword.ForeColor = System.Drawing.Color.White
+        Me.LabelPassword.Location = New System.Drawing.Point(25, 233)
+        Me.LabelPassword.Name = "LabelPassword"
+        Me.LabelPassword.Size = New System.Drawing.Size(79, 16)
+        Me.LabelPassword.TabIndex = 8
+        Me.LabelPassword.Text = "Contraseña"
+        '
+        'ButtonLogoAdm
+        '
+        Me.ButtonLogoAdm.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ButtonLogoAdm.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ButtonLogoAdm.FlatAppearance.BorderSize = 0
+        Me.ButtonLogoAdm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.ButtonLogoAdm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.ButtonLogoAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLogoAdm.ForeColor = System.Drawing.SystemColors.MenuBar
+        Me.ButtonLogoAdm.Location = New System.Drawing.Point(0, 0)
+        Me.ButtonLogoAdm.Name = "ButtonLogoAdm"
+        Me.ButtonLogoAdm.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonLogoAdm.TabIndex = 5
+        Me.ButtonLogoAdm.Text = "_"
+        Me.ButtonLogoAdm.UseVisualStyleBackColor = True
+        '
+        'LinkLabelPassword
+        '
+        Me.LinkLabelPassword.AutoSize = True
+        Me.LinkLabelPassword.LinkColor = System.Drawing.Color.White
+        Me.LinkLabelPassword.Location = New System.Drawing.Point(54, 292)
+        Me.LinkLabelPassword.Name = "LinkLabelPassword"
+        Me.LinkLabelPassword.Size = New System.Drawing.Size(136, 13)
+        Me.LinkLabelPassword.TabIndex = 9
+        Me.LinkLabelPassword.TabStop = True
+        Me.LinkLabelPassword.Text = "¿Olvidaste tu constraseña?"
         '
         'Iniciar_Sesion
         '
@@ -171,6 +237,10 @@ Partial Class Iniciar_Sesion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(257, 410)
+        Me.Controls.Add(Me.LinkLabelPassword)
+        Me.Controls.Add(Me.LabelPassword)
+        Me.Controls.Add(Me.TxtPassword)
+        Me.Controls.Add(Me.PBLogo)
         Me.Controls.Add(Me.LabelUsuarios)
         Me.Controls.Add(Me.CB_Usuarios)
         Me.Controls.Add(Me.PanelInferior)
@@ -183,6 +253,7 @@ Partial Class Iniciar_Sesion
         Me.Text = "Iniciar_Sesion"
         Me.PanelBarraTitutlo.ResumeLayout(False)
         Me.PanelInferior.ResumeLayout(False)
+        CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -198,4 +269,9 @@ Partial Class Iniciar_Sesion
     Friend WithEvents ButtonRegresar As Button
     Friend WithEvents CB_Usuarios As ComboBox
     Friend WithEvents LabelUsuarios As Label
+    Friend WithEvents PBLogo As PictureBox
+    Friend WithEvents TxtPassword As TextBox
+    Friend WithEvents LabelPassword As Label
+    Friend WithEvents ButtonLogoAdm As Button
+    Friend WithEvents LinkLabelPassword As LinkLabel
 End Class

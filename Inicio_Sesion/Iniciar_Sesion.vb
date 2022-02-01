@@ -46,10 +46,25 @@ Public Class Iniciar_Sesion
     End Sub
 
     Private Sub ButtonAceptar_Click(sender As Object, e As EventArgs) Handles ButtonAceptar.Click
-        LabelTitulo.Text = "Daniel Aros"
-        LabelFacultad.Text = "21"
-        ButtonAceptar.Visible = False
-        ButtonRegresar.Visible = True
+
+        If CB_Usuarios.Text = "Daniel Aros" And TxtPassword.Text = "1234" Or
+           CB_Usuarios.Text = "Elias Ramirez" And TxtPassword.Text = "123" Or
+           CB_Usuarios.Text = "Maria Perez" And TxtPassword.Text = "12" Then
+
+            '############# Mensaje de confirmacion #################'
+            MsgBox("Inicio sesion con exito", MsgBoxStyle.OkOnly, "Inicio Sesion")
+        Else
+            '############# Mensaje de error #################'
+            MsgBox("Contraseña incorrecta", MsgBoxStyle.Critical, "Inicio Sesion")
+            TxtPassword.Clear()
+            TxtPassword.Focus()
+        End If
+
+        'TxtPassword.PasswordChar = ""
+        'LabelTitulo.Text = "Daniel Aros"
+        'LabelFacultad.Text = "21"
+        'ButtonAceptar.Visible = False
+        'ButtonRegresar.Visible = True
     End Sub
 
     Private Sub ButtonRegresar_Click(sender As Object, e As EventArgs) Handles ButtonRegresar.Click
