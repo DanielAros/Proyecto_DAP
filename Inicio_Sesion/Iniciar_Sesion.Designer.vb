@@ -26,6 +26,7 @@ Partial Class Iniciar_Sesion
         Me.LabelTitulo = New System.Windows.Forms.Label()
         Me.LabelFacultad = New System.Windows.Forms.Label()
         Me.PanelBarraTitutlo = New System.Windows.Forms.Panel()
+        Me.ButtonLogoAdm = New System.Windows.Forms.Button()
         Me.ButtonMinimizar = New System.Windows.Forms.Button()
         Me.ButtonSalir = New System.Windows.Forms.Button()
         Me.PanelInferior = New System.Windows.Forms.Panel()
@@ -36,8 +37,9 @@ Partial Class Iniciar_Sesion
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.LabelPassword = New System.Windows.Forms.Label()
-        Me.ButtonLogoAdm = New System.Windows.Forms.Button()
         Me.LinkLabelPassword = New System.Windows.Forms.LinkLabel()
+        Me.ButtonMostrarPassword = New System.Windows.Forms.Button()
+        Me.ButtonOcultarPassword = New System.Windows.Forms.Button()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.PanelInferior.SuspendLayout()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,8 +81,26 @@ Partial Class Iniciar_Sesion
         Me.PanelBarraTitutlo.Size = New System.Drawing.Size(257, 32)
         Me.PanelBarraTitutlo.TabIndex = 2
         '
+        'ButtonLogoAdm
+        '
+        Me.ButtonLogoAdm.BackgroundImage = CType(resources.GetObject("ButtonLogoAdm.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonLogoAdm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonLogoAdm.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ButtonLogoAdm.FlatAppearance.BorderSize = 0
+        Me.ButtonLogoAdm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.ButtonLogoAdm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.ButtonLogoAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLogoAdm.ForeColor = System.Drawing.SystemColors.MenuBar
+        Me.ButtonLogoAdm.Location = New System.Drawing.Point(3, 0)
+        Me.ButtonLogoAdm.Name = "ButtonLogoAdm"
+        Me.ButtonLogoAdm.Size = New System.Drawing.Size(30, 32)
+        Me.ButtonLogoAdm.TabIndex = 5
+        Me.ButtonLogoAdm.Text = "_"
+        Me.ButtonLogoAdm.UseVisualStyleBackColor = True
+        '
         'ButtonMinimizar
         '
+        Me.ButtonMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ButtonMinimizar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ButtonMinimizar.Dock = System.Windows.Forms.DockStyle.Right
         Me.ButtonMinimizar.FlatAppearance.BorderSize = 0
@@ -88,11 +108,11 @@ Partial Class Iniciar_Sesion
         Me.ButtonMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ButtonMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonMinimizar.ForeColor = System.Drawing.SystemColors.MenuBar
-        Me.ButtonMinimizar.Location = New System.Drawing.Point(193, 0)
+        Me.ButtonMinimizar.Location = New System.Drawing.Point(197, 0)
         Me.ButtonMinimizar.Name = "ButtonMinimizar"
-        Me.ButtonMinimizar.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonMinimizar.Size = New System.Drawing.Size(30, 32)
         Me.ButtonMinimizar.TabIndex = 4
-        Me.ButtonMinimizar.Text = "_"
+        Me.ButtonMinimizar.Text = "___"
         Me.ButtonMinimizar.UseVisualStyleBackColor = True
         '
         'ButtonSalir
@@ -105,9 +125,9 @@ Partial Class Iniciar_Sesion
         Me.ButtonSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.ButtonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonSalir.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        Me.ButtonSalir.Location = New System.Drawing.Point(225, 0)
+        Me.ButtonSalir.Location = New System.Drawing.Point(227, 0)
         Me.ButtonSalir.Name = "ButtonSalir"
-        Me.ButtonSalir.Size = New System.Drawing.Size(32, 32)
+        Me.ButtonSalir.Size = New System.Drawing.Size(30, 32)
         Me.ButtonSalir.TabIndex = 3
         Me.ButtonSalir.Text = "X"
         Me.ButtonSalir.UseVisualStyleBackColor = True
@@ -179,7 +199,7 @@ Partial Class Iniciar_Sesion
         Me.PBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PBLogo.Location = New System.Drawing.Point(85, 38)
         Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(85, 75)
+        Me.PBLogo.Size = New System.Drawing.Size(85, 81)
         Me.PBLogo.TabIndex = 6
         Me.PBLogo.TabStop = False
         '
@@ -204,22 +224,6 @@ Partial Class Iniciar_Sesion
         Me.LabelPassword.TabIndex = 8
         Me.LabelPassword.Text = "Contraseña"
         '
-        'ButtonLogoAdm
-        '
-        Me.ButtonLogoAdm.Cursor = System.Windows.Forms.Cursors.Default
-        Me.ButtonLogoAdm.Dock = System.Windows.Forms.DockStyle.Left
-        Me.ButtonLogoAdm.FlatAppearance.BorderSize = 0
-        Me.ButtonLogoAdm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.ButtonLogoAdm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.ButtonLogoAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLogoAdm.ForeColor = System.Drawing.SystemColors.MenuBar
-        Me.ButtonLogoAdm.Location = New System.Drawing.Point(0, 0)
-        Me.ButtonLogoAdm.Name = "ButtonLogoAdm"
-        Me.ButtonLogoAdm.Size = New System.Drawing.Size(32, 32)
-        Me.ButtonLogoAdm.TabIndex = 5
-        Me.ButtonLogoAdm.Text = "_"
-        Me.ButtonLogoAdm.UseVisualStyleBackColor = True
-        '
         'LinkLabelPassword
         '
         Me.LinkLabelPassword.AutoSize = True
@@ -231,12 +235,43 @@ Partial Class Iniciar_Sesion
         Me.LinkLabelPassword.TabStop = True
         Me.LinkLabelPassword.Text = "¿Olvidaste tu constraseña?"
         '
+        'ButtonMostrarPassword
+        '
+        Me.ButtonMostrarPassword.BackColor = System.Drawing.SystemColors.Window
+        Me.ButtonMostrarPassword.BackgroundImage = CType(resources.GetObject("ButtonMostrarPassword.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonMostrarPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonMostrarPassword.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonMostrarPassword.FlatAppearance.BorderSize = 0
+        Me.ButtonMostrarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonMostrarPassword.Location = New System.Drawing.Point(217, 253)
+        Me.ButtonMostrarPassword.Name = "ButtonMostrarPassword"
+        Me.ButtonMostrarPassword.Size = New System.Drawing.Size(17, 17)
+        Me.ButtonMostrarPassword.TabIndex = 10
+        Me.ButtonMostrarPassword.UseVisualStyleBackColor = False
+        '
+        'ButtonOcultarPassword
+        '
+        Me.ButtonOcultarPassword.BackColor = System.Drawing.SystemColors.Window
+        Me.ButtonOcultarPassword.BackgroundImage = CType(resources.GetObject("ButtonOcultarPassword.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonOcultarPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ButtonOcultarPassword.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonOcultarPassword.FlatAppearance.BorderSize = 0
+        Me.ButtonOcultarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonOcultarPassword.Location = New System.Drawing.Point(217, 253)
+        Me.ButtonOcultarPassword.Name = "ButtonOcultarPassword"
+        Me.ButtonOcultarPassword.Size = New System.Drawing.Size(17, 17)
+        Me.ButtonOcultarPassword.TabIndex = 11
+        Me.ButtonOcultarPassword.UseVisualStyleBackColor = False
+        Me.ButtonOcultarPassword.Visible = False
+        '
         'Iniciar_Sesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(257, 410)
+        Me.Controls.Add(Me.ButtonOcultarPassword)
+        Me.Controls.Add(Me.ButtonMostrarPassword)
         Me.Controls.Add(Me.LinkLabelPassword)
         Me.Controls.Add(Me.LabelPassword)
         Me.Controls.Add(Me.TxtPassword)
@@ -274,4 +309,6 @@ Partial Class Iniciar_Sesion
     Friend WithEvents LabelPassword As Label
     Friend WithEvents ButtonLogoAdm As Button
     Friend WithEvents LinkLabelPassword As LinkLabel
+    Friend WithEvents ButtonMostrarPassword As Button
+    Friend WithEvents ButtonOcultarPassword As Button
 End Class

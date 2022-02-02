@@ -73,4 +73,17 @@ Public Class Iniciar_Sesion
         ButtonRegresar.Visible = False
         ButtonAceptar.Visible = True
     End Sub
+
+    Private Sub ButtonMostrarPassword_Click(sender As Object, e As EventArgs) Handles ButtonMostrarPassword.Click
+        TxtPassword.PasswordChar = ""
+        ButtonMostrarPassword.Visible = False
+        ButtonOcultarPassword.Visible = True
+
+    End Sub
+
+    Private Sub ButtonOcultarPassword_Click(sender As Object, e As EventArgs) Handles ButtonOcultarPassword.Click
+        TxtPassword.PasswordChar = "*"
+        ButtonMostrarPassword.Visible = True
+        ButtonOcultarPassword.Visible = False
+    End Sub
 End Class
