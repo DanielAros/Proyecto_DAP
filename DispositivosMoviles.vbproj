@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bienvenida\Bienvenida.Designer.vb">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bienvenida\Bienvenida.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicio_Sesion\Iniciar_Sesion.Designer.vb">
       <DependentUpon>Iniciar_Sesion.vb</DependentUpon>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Bienvenida\Bienvenida.resx">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio_Sesion\Iniciar_Sesion.resx">
       <DependentUpon>Iniciar_Sesion.vb</DependentUpon>
     </EmbeddedResource>

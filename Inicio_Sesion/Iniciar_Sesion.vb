@@ -39,6 +39,9 @@ Public Class Iniciar_Sesion
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
         CB_Usuarios.Text = "Seleccione un usuario"
+
+        CB_Usuarios.SelectedIndex = 0
+        TxtPassword.Text = "1234"
     End Sub
 
     Private Sub PanelInferior_Paint(sender As Object, e As PaintEventArgs) Handles PanelInferior.Paint
@@ -51,8 +54,13 @@ Public Class Iniciar_Sesion
            CB_Usuarios.Text = "Elias Ramirez" And TxtPassword.Text = "123" Or
            CB_Usuarios.Text = "Maria Perez" And TxtPassword.Text = "12" Then
 
+            Me.Hide()
+            'Bienvenida.Show() se sobreponen los formularios
+            Bienvenida.ShowDialog()
+
+
             '############# Mensaje de confirmacion #################'
-            MsgBox("Inicio sesion con exito", MsgBoxStyle.OkOnly, "Inicio Sesion")
+            'MsgBox("Inicio sesion con exito", MsgBoxStyle.OkOnly, "Inicio Sesion")
         Else
             '############# Mensaje de error #################'
             MsgBox("Contraseña incorrecta", MsgBoxStyle.Critical, "Inicio Sesion")
@@ -85,5 +93,9 @@ Public Class Iniciar_Sesion
         TxtPassword.PasswordChar = "*"
         ButtonMostrarPassword.Visible = True
         ButtonOcultarPassword.Visible = False
+    End Sub
+
+    Private Sub CB_Usuarios_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CB_Usuarios.KeyPress
+        e.KeyChar = ""
     End Sub
 End Class
