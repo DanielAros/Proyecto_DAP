@@ -22,6 +22,7 @@ Partial Class Bienvenida
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bienvenida))
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.LabelTitulo = New System.Windows.Forms.Label()
@@ -32,6 +33,8 @@ Partial Class Bienvenida
         Me.LabelNombre = New System.Windows.Forms.Label()
         Me.ProgressBarCargando = New System.Windows.Forms.ProgressBar()
         Me.LabelCargando = New System.Windows.Forms.Label()
+        Me.TimerAbrir = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerCerrar = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.SuspendLayout()
@@ -149,11 +152,19 @@ Partial Class Bienvenida
         Me.LabelCargando.AutoSize = True
         Me.LabelCargando.Font = New System.Drawing.Font("Niagara Engraved", 16.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelCargando.ForeColor = System.Drawing.Color.White
-        Me.LabelCargando.Location = New System.Drawing.Point(530, 227)
+        Me.LabelCargando.Location = New System.Drawing.Point(576, 227)
         Me.LabelCargando.Name = "LabelCargando"
-        Me.LabelCargando.Size = New System.Drawing.Size(77, 23)
+        Me.LabelCargando.Size = New System.Drawing.Size(31, 23)
         Me.LabelCargando.TabIndex = 12
-        Me.LabelCargando.Text = "Cargando...."
+        Me.LabelCargando.Text = "10%"
+        '
+        'TimerAbrir
+        '
+        Me.TimerAbrir.Interval = 16
+        '
+        'TimerCerrar
+        '
+        Me.TimerCerrar.Interval = 15
         '
         'Bienvenida
         '
@@ -187,4 +198,6 @@ Partial Class Bienvenida
     Friend WithEvents LabelNombre As Label
     Friend WithEvents ProgressBarCargando As ProgressBar
     Friend WithEvents LabelCargando As Label
+    Friend WithEvents TimerAbrir As Timer
+    Friend WithEvents TimerCerrar As Timer
 End Class

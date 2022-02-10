@@ -248,6 +248,7 @@ Partial Class Iniciar_Sesion
         Me.ButtonMostrarPassword.Size = New System.Drawing.Size(17, 17)
         Me.ButtonMostrarPassword.TabIndex = 10
         Me.ButtonMostrarPassword.UseVisualStyleBackColor = False
+        Me.ButtonMostrarPassword.Visible = False
         '
         'ButtonOcultarPassword
         '
@@ -262,7 +263,6 @@ Partial Class Iniciar_Sesion
         Me.ButtonOcultarPassword.Size = New System.Drawing.Size(17, 17)
         Me.ButtonOcultarPassword.TabIndex = 11
         Me.ButtonOcultarPassword.UseVisualStyleBackColor = False
-        Me.ButtonOcultarPassword.Visible = False
         '
         'Iniciar_Sesion
         '
