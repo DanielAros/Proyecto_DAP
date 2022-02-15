@@ -63,7 +63,7 @@ Partial Class Iniciar_Sesion
         Me.LabelFacultad.AutoSize = True
         Me.LabelFacultad.Font = New System.Drawing.Font("Niagara Engraved", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelFacultad.ForeColor = System.Drawing.Color.White
-        Me.LabelFacultad.Location = New System.Drawing.Point(52, 323)
+        Me.LabelFacultad.Location = New System.Drawing.Point(52, 346)
         Me.LabelFacultad.Name = "LabelFacultad"
         Me.LabelFacultad.Size = New System.Drawing.Size(153, 26)
         Me.LabelFacultad.TabIndex = 1
@@ -138,7 +138,7 @@ Partial Class Iniciar_Sesion
         Me.PanelInferior.Controls.Add(Me.ButtonRegresar)
         Me.PanelInferior.Controls.Add(Me.ButtonAceptar)
         Me.PanelInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 360)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 383)
         Me.PanelInferior.Name = "PanelInferior"
         Me.PanelInferior.Size = New System.Drawing.Size(257, 50)
         Me.PanelInferior.TabIndex = 3
@@ -269,7 +269,7 @@ Partial Class Iniciar_Sesion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(257, 410)
+        Me.ClientSize = New System.Drawing.Size(257, 433)
         Me.Controls.Add(Me.ButtonOcultarPassword)
         Me.Controls.Add(Me.ButtonMostrarPassword)
         Me.Controls.Add(Me.LinkLabelPassword)

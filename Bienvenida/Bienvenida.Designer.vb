@@ -35,6 +35,9 @@ Partial Class Bienvenida
         Me.LabelCargando = New System.Windows.Forms.Label()
         Me.TimerAbrir = New System.Windows.Forms.Timer(Me.components)
         Me.TimerCerrar = New System.Windows.Forms.Timer(Me.components)
+        Me.LabelCorreo = New System.Windows.Forms.Label()
+        Me.LabelTelefono = New System.Windows.Forms.Label()
+        Me.LabelDireccion = New System.Windows.Forms.Label()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.SuspendLayout()
@@ -130,7 +133,7 @@ Partial Class Bienvenida
         Me.LabelNombre.AutoSize = True
         Me.LabelNombre.Font = New System.Drawing.Font("Niagara Engraved", 30.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelNombre.ForeColor = System.Drawing.Color.White
-        Me.LabelNombre.Location = New System.Drawing.Point(234, 146)
+        Me.LabelNombre.Location = New System.Drawing.Point(234, 113)
         Me.LabelNombre.Name = "LabelNombre"
         Me.LabelNombre.Size = New System.Drawing.Size(90, 43)
         Me.LabelNombre.TabIndex = 10
@@ -139,7 +142,7 @@ Partial Class Bienvenida
         'ProgressBarCargando
         '
         Me.ProgressBarCargando.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ProgressBarCargando.Location = New System.Drawing.Point(242, 253)
+        Me.ProgressBarCargando.Location = New System.Drawing.Point(242, 263)
         Me.ProgressBarCargando.Name = "ProgressBarCargando"
         Me.ProgressBarCargando.Size = New System.Drawing.Size(365, 26)
         Me.ProgressBarCargando.Style = System.Windows.Forms.ProgressBarStyle.Continuous
@@ -152,7 +155,7 @@ Partial Class Bienvenida
         Me.LabelCargando.AutoSize = True
         Me.LabelCargando.Font = New System.Drawing.Font("Niagara Engraved", 16.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelCargando.ForeColor = System.Drawing.Color.White
-        Me.LabelCargando.Location = New System.Drawing.Point(576, 227)
+        Me.LabelCargando.Location = New System.Drawing.Point(576, 239)
         Me.LabelCargando.Name = "LabelCargando"
         Me.LabelCargando.Size = New System.Drawing.Size(31, 23)
         Me.LabelCargando.TabIndex = 12
@@ -166,12 +169,51 @@ Partial Class Bienvenida
         '
         Me.TimerCerrar.Interval = 15
         '
+        'LabelCorreo
+        '
+        Me.LabelCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelCorreo.AutoSize = True
+        Me.LabelCorreo.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCorreo.ForeColor = System.Drawing.Color.White
+        Me.LabelCorreo.Location = New System.Drawing.Point(237, 156)
+        Me.LabelCorreo.Name = "LabelCorreo"
+        Me.LabelCorreo.Size = New System.Drawing.Size(59, 29)
+        Me.LabelCorreo.TabIndex = 13
+        Me.LabelCorreo.Text = "Correo"
+        '
+        'LabelTelefono
+        '
+        Me.LabelTelefono.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelTelefono.AutoSize = True
+        Me.LabelTelefono.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTelefono.ForeColor = System.Drawing.Color.White
+        Me.LabelTelefono.Location = New System.Drawing.Point(236, 190)
+        Me.LabelTelefono.Name = "LabelTelefono"
+        Me.LabelTelefono.Size = New System.Drawing.Size(71, 29)
+        Me.LabelTelefono.TabIndex = 14
+        Me.LabelTelefono.Text = "Telefono"
+        '
+        'LabelDireccion
+        '
+        Me.LabelDireccion.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelDireccion.AutoSize = True
+        Me.LabelDireccion.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelDireccion.ForeColor = System.Drawing.Color.White
+        Me.LabelDireccion.Location = New System.Drawing.Point(237, 222)
+        Me.LabelDireccion.Name = "LabelDireccion"
+        Me.LabelDireccion.Size = New System.Drawing.Size(76, 29)
+        Me.LabelDireccion.TabIndex = 15
+        Me.LabelDireccion.Text = "Direccion"
+        '
         'Bienvenida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(657, 311)
+        Me.Controls.Add(Me.LabelDireccion)
+        Me.Controls.Add(Me.LabelTelefono)
+        Me.Controls.Add(Me.LabelCorreo)
         Me.Controls.Add(Me.LabelCargando)
         Me.Controls.Add(Me.ProgressBarCargando)
         Me.Controls.Add(Me.LabelNombre)
@@ -200,4 +242,7 @@ Partial Class Bienvenida
     Friend WithEvents LabelCargando As Label
     Friend WithEvents TimerAbrir As Timer
     Friend WithEvents TimerCerrar As Timer
+    Friend WithEvents LabelCorreo As Label
+    Friend WithEvents LabelTelefono As Label
+    Friend WithEvents LabelDireccion As Label
 End Class

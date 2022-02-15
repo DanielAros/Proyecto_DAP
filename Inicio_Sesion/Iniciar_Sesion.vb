@@ -5,6 +5,14 @@ Imports System.Data.OleDb
 Imports System.Runtime.InteropServices
 
 Public Class Iniciar_Sesion
+    'Dim significa que es privada la variable
+    'Dim Micorreo As String
+
+    'Variable publica
+    Public Micorreo As String
+    Public Tipo_InicioSesion As String
+    Public Telefono As String
+    Public Direccion As String
 
     '**************************************************'
     'Botones para minimizar y cerrar (Evento click)'
@@ -98,4 +106,30 @@ Public Class Iniciar_Sesion
     Private Sub CB_Usuarios_KeyPress(sender As Object, e As KeyPressEventArgs) Handles CB_Usuarios.KeyPress
         e.KeyChar = ""
     End Sub
+
+    Private Sub CB_Usuarios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Usuarios.SelectedIndexChanged
+
+        If CB_Usuarios.Text = "Daniel Aros" Then
+            Micorreo = "danielaros@gmail.com"
+            Tipo_InicioSesion = "Administrador"
+            Telefono = "4425689215"
+            Direccion = "Av de las ciencias"
+
+            '-------------------MENSAJE DE CONFIRMACION------------------------------
+            'MsgBox("El correo del usuario es: " & Micorreo, MsgBoxStyle.OkOnly, "Iniciando Sesion")
+        Else
+            Micorreo = "Correo"
+            Tipo_InicioSesion = "Tipo"
+            Telefono = "Telefono"
+            Direccion = "Direccion"
+        End If
+    End Sub
+
+    'Si eliminamos la palabra reservada Private, podemos usar este proceso en otro formulario
+    Private Sub Limpiar_Txt()
+        CB_Usuarios.Text = "Selecciona un usuario"
+        LabelPassword.Text = ""
+    End Sub
+
+    'Apuntes: Que es un evento, variable, temporizador, clear. 
 End Class
