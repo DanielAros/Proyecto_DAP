@@ -81,6 +81,7 @@ Public Class Bienvenida
 
         If ProgressBarCargando.Value = 100 Then
             TimerAbrir.Stop()
+            TimerCerrar.Start()
         End If
 
     End Sub
@@ -90,8 +91,14 @@ Public Class Bienvenida
         Me.Opacity -= 0.1
 
         If Me.Opacity = 0 Then
+            Me.Close()
             TimerCerrar.Stop()
-            Application.Exit()
+            'Application.Exit()
+            Formulario_Principal.ShowDialog()
         End If
+    End Sub
+
+    Private Sub PanelBarraTitutlo_Paint(sender As Object, e As PaintEventArgs) Handles PanelBarraTitutlo.Paint
+
     End Sub
 End Class

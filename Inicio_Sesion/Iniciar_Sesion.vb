@@ -13,6 +13,7 @@ Public Class Iniciar_Sesion
     Public Tipo_InicioSesion As String
     Public Telefono As String
     Public Direccion As String
+    Public Facultad As String
 
     '**************************************************'
     'Botones para minimizar y cerrar (Evento click)'
@@ -114,6 +115,7 @@ Public Class Iniciar_Sesion
             Tipo_InicioSesion = "Administrador"
             Telefono = "4425689215"
             Direccion = "Av de las ciencias"
+            Facultad = "Informatica"
 
             '-------------------MENSAJE DE CONFIRMACION------------------------------
             'MsgBox("El correo del usuario es: " & Micorreo, MsgBoxStyle.OkOnly, "Iniciando Sesion")
@@ -129,6 +131,15 @@ Public Class Iniciar_Sesion
     Private Sub Limpiar_Txt()
         CB_Usuarios.Text = "Selecciona un usuario"
         LabelPassword.Text = ""
+    End Sub
+
+    Private Sub TxtPassword_TextChanged(sender As Object, e As EventArgs) Handles TxtPassword.TextChanged
+
+    End Sub
+
+    Private Sub Iniciar_Sesion_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
     'Apuntes: Que es un evento, variable, temporizador, clear. 
