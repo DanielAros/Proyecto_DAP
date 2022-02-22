@@ -11,6 +11,8 @@ Public Class Formulario_Principal
         LabelCorreo.Text = Iniciar_Sesion.Micorreo
         LabelNombreFacultad.Text = Iniciar_Sesion.Facultad
         LabelTipoUsuario.Text = Iniciar_Sesion.Tipo_InicioSesion
+
+        Maximizar()
     End Sub
 
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs)
@@ -57,6 +59,35 @@ Public Class Formulario_Principal
 
     Private Sub ButtonMinimizar_Click(sender As Object, e As EventArgs) Handles ButtonMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+
+    Dim Lx, Ly As Integer 'Location (Lx, Ly)
+    Dim Sw, Sh As Integer 'Size 
+    Private Sub Maximizar()
+        Lx = Me.Location.X
+        Ly = Me.Location.Y
+
+        Sw = Me.Size.Width
+        Sh = Me.Size.Height
+
+        Me.Size = Screen.PrimaryScreen.WorkingArea.Size
+        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+
+        BtnMaximizar.Visible = False
+        BtnRestaurar.Visible = True
+
+    End Sub
+
+    Private Sub BtnRestaurar_Click(sender As Object, e As EventArgs) Handles BtnRestaurar.Click
+        Me.Size = New Size(Sw, Sh)
+        Me.Location = New Point(Lx, Ly)
+        BtnMaximizar.Visible = True
+        BtnRestaurar.Visible = False
+    End Sub
+
+    Private Sub BtnMaximizar_Click(sender As Object, e As EventArgs) Handles BtnMaximizar.Click
+        Maximizar()
     End Sub
 
     '--------------------------------------------------------------------------------------------------------------
