@@ -25,29 +25,29 @@ Partial Class Formulario_Principal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Formulario_Principal))
         Me.PanelBarraTitutlo = New System.Windows.Forms.Panel()
+        Me.BtnMaximizar = New System.Windows.Forms.Button()
+        Me.BtnRestaurar = New System.Windows.Forms.Button()
         Me.ButtonLogoAdm = New System.Windows.Forms.Button()
         Me.ButtonMinimizar = New System.Windows.Forms.Button()
         Me.ButtonSalir = New System.Windows.Forms.Button()
         Me.PanelBarraMenu = New System.Windows.Forms.Panel()
-        Me.BtnInicio = New System.Windows.Forms.Button()
+        Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.PBLogo = New System.Windows.Forms.PictureBox()
+        Me.BtnAddMeterias = New System.Windows.Forms.Button()
         Me.ImageListIconos = New System.Windows.Forms.ImageList(Me.components)
+        Me.BtnDocentes = New System.Windows.Forms.Button()
+        Me.BtnInicio = New System.Windows.Forms.Button()
         Me.LabelCorreo = New System.Windows.Forms.Label()
         Me.LabelNombreFacultad = New System.Windows.Forms.Label()
         Me.LabelNombre = New System.Windows.Forms.Label()
         Me.LabelTipoUsuario = New System.Windows.Forms.Label()
-        Me.BtnDocentes = New System.Windows.Forms.Button()
-        Me.BtnAddMeterias = New System.Windows.Forms.Button()
-        Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.PanelContenedor = New System.Windows.Forms.Panel()
         Me.LabelBienvenido = New System.Windows.Forms.Label()
-        Me.BtnRestaurar = New System.Windows.Forms.Button()
-        Me.BtnMaximizar = New System.Windows.Forms.Button()
-        Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.PanelBarraMenu.SuspendLayout()
+        Me.PanelLogo.SuspendLayout()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelContenedor.SuspendLayout()
-        Me.PanelLogo.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelBarraTitutlo
@@ -63,6 +63,41 @@ Partial Class Formulario_Principal
         Me.PanelBarraTitutlo.Name = "PanelBarraTitutlo"
         Me.PanelBarraTitutlo.Size = New System.Drawing.Size(705, 25)
         Me.PanelBarraTitutlo.TabIndex = 3
+        '
+        'BtnMaximizar
+        '
+        Me.BtnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnMaximizar.FlatAppearance.BorderSize = 0
+        Me.BtnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.BtnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BtnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMaximizar.ForeColor = System.Drawing.SystemColors.MenuBar
+        Me.BtnMaximizar.Location = New System.Drawing.Point(639, 0)
+        Me.BtnMaximizar.Name = "BtnMaximizar"
+        Me.BtnMaximizar.Size = New System.Drawing.Size(30, 25)
+        Me.BtnMaximizar.TabIndex = 7
+        Me.BtnMaximizar.Text = "<-"
+        Me.BtnMaximizar.UseVisualStyleBackColor = True
+        '
+        'BtnRestaurar
+        '
+        Me.BtnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRestaurar.FlatAppearance.BorderSize = 0
+        Me.BtnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.BtnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BtnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRestaurar.ForeColor = System.Drawing.SystemColors.MenuBar
+        Me.BtnRestaurar.Location = New System.Drawing.Point(639, 0)
+        Me.BtnRestaurar.Name = "BtnRestaurar"
+        Me.BtnRestaurar.Size = New System.Drawing.Size(30, 25)
+        Me.BtnRestaurar.TabIndex = 6
+        Me.BtnRestaurar.Text = "->"
+        Me.BtnRestaurar.UseVisualStyleBackColor = True
+        Me.BtnRestaurar.Visible = False
         '
         'ButtonLogoAdm
         '
@@ -132,6 +167,73 @@ Partial Class Formulario_Principal
         Me.PanelBarraMenu.Size = New System.Drawing.Size(136, 387)
         Me.PanelBarraMenu.TabIndex = 4
         '
+        'PanelLogo
+        '
+        Me.PanelLogo.Controls.Add(Me.PBLogo)
+        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLogo.Name = "PanelLogo"
+        Me.PanelLogo.Size = New System.Drawing.Size(136, 100)
+        Me.PanelLogo.TabIndex = 9
+        '
+        'PBLogo
+        '
+        Me.PBLogo.BackgroundImage = CType(resources.GetObject("PBLogo.BackgroundImage"), System.Drawing.Image)
+        Me.PBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBLogo.Location = New System.Drawing.Point(30, 13)
+        Me.PBLogo.Name = "PBLogo"
+        Me.PBLogo.Size = New System.Drawing.Size(78, 74)
+        Me.PBLogo.TabIndex = 0
+        Me.PBLogo.TabStop = False
+        '
+        'BtnAddMeterias
+        '
+        Me.BtnAddMeterias.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAddMeterias.FlatAppearance.BorderSize = 0
+        Me.BtnAddMeterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAddMeterias.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddMeterias.ForeColor = System.Drawing.Color.White
+        Me.BtnAddMeterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnAddMeterias.ImageIndex = 1
+        Me.BtnAddMeterias.ImageList = Me.ImageListIconos
+        Me.BtnAddMeterias.Location = New System.Drawing.Point(0, 168)
+        Me.BtnAddMeterias.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnAddMeterias.Name = "BtnAddMeterias"
+        Me.BtnAddMeterias.Size = New System.Drawing.Size(136, 30)
+        Me.BtnAddMeterias.TabIndex = 2
+        Me.BtnAddMeterias.Text = "ADD MATERIAS"
+        Me.BtnAddMeterias.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnAddMeterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnAddMeterias.UseVisualStyleBackColor = True
+        '
+        'ImageListIconos
+        '
+        Me.ImageListIconos.ImageStream = CType(resources.GetObject("ImageListIconos.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageListIconos.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageListIconos.Images.SetKeyName(0, "menu.png")
+        Me.ImageListIconos.Images.SetKeyName(1, "materias.png")
+        Me.ImageListIconos.Images.SetKeyName(2, "personaDocente.png")
+        '
+        'BtnDocentes
+        '
+        Me.BtnDocentes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnDocentes.FlatAppearance.BorderSize = 0
+        Me.BtnDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnDocentes.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDocentes.ForeColor = System.Drawing.Color.White
+        Me.BtnDocentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnDocentes.ImageIndex = 2
+        Me.BtnDocentes.ImageList = Me.ImageListIconos
+        Me.BtnDocentes.Location = New System.Drawing.Point(0, 136)
+        Me.BtnDocentes.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnDocentes.Name = "BtnDocentes"
+        Me.BtnDocentes.Size = New System.Drawing.Size(136, 30)
+        Me.BtnDocentes.TabIndex = 3
+        Me.BtnDocentes.Text = "DOCENTES"
+        Me.BtnDocentes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnDocentes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnDocentes.UseVisualStyleBackColor = True
+        '
         'BtnInicio
         '
         Me.BtnInicio.Cursor = System.Windows.Forms.Cursors.Hand
@@ -151,14 +253,6 @@ Partial Class Formulario_Principal
         Me.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnInicio.UseVisualStyleBackColor = True
-        '
-        'ImageListIconos
-        '
-        Me.ImageListIconos.ImageStream = CType(resources.GetObject("ImageListIconos.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageListIconos.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageListIconos.Images.SetKeyName(0, "menu.png")
-        Me.ImageListIconos.Images.SetKeyName(1, "materias.png")
-        Me.ImageListIconos.Images.SetKeyName(2, "personaDocente.png")
         '
         'LabelCorreo
         '
@@ -208,56 +302,6 @@ Partial Class Formulario_Principal
         Me.LabelTipoUsuario.Text = "Tipo Usuario"
         Me.LabelTipoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BtnDocentes
-        '
-        Me.BtnDocentes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDocentes.FlatAppearance.BorderSize = 0
-        Me.BtnDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDocentes.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDocentes.ForeColor = System.Drawing.Color.White
-        Me.BtnDocentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDocentes.ImageIndex = 2
-        Me.BtnDocentes.ImageList = Me.ImageListIconos
-        Me.BtnDocentes.Location = New System.Drawing.Point(0, 136)
-        Me.BtnDocentes.Margin = New System.Windows.Forms.Padding(1)
-        Me.BtnDocentes.Name = "BtnDocentes"
-        Me.BtnDocentes.Size = New System.Drawing.Size(136, 30)
-        Me.BtnDocentes.TabIndex = 3
-        Me.BtnDocentes.Text = "DOCENTES"
-        Me.BtnDocentes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnDocentes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnDocentes.UseVisualStyleBackColor = True
-        '
-        'BtnAddMeterias
-        '
-        Me.BtnAddMeterias.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAddMeterias.FlatAppearance.BorderSize = 0
-        Me.BtnAddMeterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAddMeterias.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddMeterias.ForeColor = System.Drawing.Color.White
-        Me.BtnAddMeterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAddMeterias.ImageIndex = 1
-        Me.BtnAddMeterias.ImageList = Me.ImageListIconos
-        Me.BtnAddMeterias.Location = New System.Drawing.Point(0, 168)
-        Me.BtnAddMeterias.Margin = New System.Windows.Forms.Padding(1)
-        Me.BtnAddMeterias.Name = "BtnAddMeterias"
-        Me.BtnAddMeterias.Size = New System.Drawing.Size(136, 30)
-        Me.BtnAddMeterias.TabIndex = 2
-        Me.BtnAddMeterias.Text = "ADD MATERIAS"
-        Me.BtnAddMeterias.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnAddMeterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnAddMeterias.UseVisualStyleBackColor = True
-        '
-        'PBLogo
-        '
-        Me.PBLogo.BackgroundImage = CType(resources.GetObject("PBLogo.BackgroundImage"), System.Drawing.Image)
-        Me.PBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBLogo.Location = New System.Drawing.Point(30, 13)
-        Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(78, 74)
-        Me.PBLogo.TabIndex = 0
-        Me.PBLogo.TabStop = False
-        '
         'PanelContenedor
         '
         Me.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -281,50 +325,6 @@ Partial Class Formulario_Principal
         Me.LabelBienvenido.TabIndex = 0
         Me.LabelBienvenido.Text = "¡BIENVENIDO!"
         '
-        'BtnRestaurar
-        '
-        Me.BtnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnRestaurar.FlatAppearance.BorderSize = 0
-        Me.BtnRestaurar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.BtnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BtnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnRestaurar.ForeColor = System.Drawing.SystemColors.MenuBar
-        Me.BtnRestaurar.Location = New System.Drawing.Point(639, 0)
-        Me.BtnRestaurar.Name = "BtnRestaurar"
-        Me.BtnRestaurar.Size = New System.Drawing.Size(30, 25)
-        Me.BtnRestaurar.TabIndex = 6
-        Me.BtnRestaurar.Text = "->"
-        Me.BtnRestaurar.UseVisualStyleBackColor = True
-        Me.BtnRestaurar.Visible = False
-        '
-        'BtnMaximizar
-        '
-        Me.BtnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnMaximizar.FlatAppearance.BorderSize = 0
-        Me.BtnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.BtnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BtnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMaximizar.ForeColor = System.Drawing.SystemColors.MenuBar
-        Me.BtnMaximizar.Location = New System.Drawing.Point(639, 0)
-        Me.BtnMaximizar.Name = "BtnMaximizar"
-        Me.BtnMaximizar.Size = New System.Drawing.Size(30, 25)
-        Me.BtnMaximizar.TabIndex = 7
-        Me.BtnMaximizar.Text = "<-"
-        Me.BtnMaximizar.UseVisualStyleBackColor = True
-        '
-        'PanelLogo
-        '
-        Me.PanelLogo.Controls.Add(Me.PBLogo)
-        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(136, 100)
-        Me.PanelLogo.TabIndex = 9
-        '
         'Formulario_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -339,10 +339,10 @@ Partial Class Formulario_Principal
         Me.Text = "Formulario_Principal"
         Me.PanelBarraTitutlo.ResumeLayout(False)
         Me.PanelBarraMenu.ResumeLayout(False)
+        Me.PanelLogo.ResumeLayout(False)
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelContenedor.ResumeLayout(False)
         Me.PanelContenedor.PerformLayout()
-        Me.PanelLogo.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

@@ -79,6 +79,18 @@
     <Compile Include="Bienvenida\Bienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Fomrulario Dos\Formulario_Dos.Designer.vb">
+      <DependentUpon>Formulario_Dos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Fomrulario Dos\Formulario_Dos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario Uno\Formulario_Uno.Designer.vb">
+      <DependentUpon>Formulario_Uno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario Uno\Formulario_Uno.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formulario_Principal\Formulario_Principal.Designer.vb">
       <DependentUpon>Formulario_Principal.vb</DependentUpon>
     </Compile>
@@ -111,6 +123,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Bienvenida\Bienvenida.resx">
       <DependentUpon>Bienvenida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fomrulario Dos\Formulario_Dos.resx">
+      <DependentUpon>Formulario_Dos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario Uno\Formulario_Uno.resx">
+      <DependentUpon>Formulario_Uno.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario_Principal\Formulario_Principal.resx">
       <DependentUpon>Formulario_Principal.vb</DependentUpon>

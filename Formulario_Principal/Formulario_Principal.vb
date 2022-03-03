@@ -53,10 +53,6 @@ Public Class Formulario_Principal
 
     End Sub
 
-    Private Sub BtnInicio_Click_1(sender As Object, e As EventArgs) Handles BtnInicio.Click
-
-    End Sub
-
     Private Sub ButtonMinimizar_Click(sender As Object, e As EventArgs) Handles ButtonMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
@@ -79,6 +75,7 @@ Public Class Formulario_Principal
 
     End Sub
 
+
     Private Sub BtnRestaurar_Click(sender As Object, e As EventArgs) Handles BtnRestaurar.Click
         Me.Size = New Size(Sw, Sh)
         Me.Location = New Point(Lx, Ly)
@@ -91,6 +88,58 @@ Public Class Formulario_Principal
     End Sub
 
     '--------------------------------------------------------------------------------------------------------------
+    '//**************************************************************
+    '// Botones que dan inicio a los formularios hijos
+    '//**************************************************************
+
+    Private Sub BtnInicio_Click_1(sender As Object, e As EventArgs) Handles BtnInicio.Click
+
+        regresarColores()
+        AbrirFormularioContenedor(New Formulario_Uno)
+        BtnInicio.FlatAppearance.BorderColor = Color.Turquoise
+        'BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(24, 24, 24)
+
+    End Sub
+
+    Private Sub BtnDocentes_Click(sender As Object, e As EventArgs) Handles BtnDocentes.Click
+        regresarColores()
+        AbrirFormularioContenedor(New Formulario_Dos)
+        BtnDocentes.FlatAppearance.BorderColor = Color.Turquoise
+    End Sub
+
+    Dim FormularioActivo As Form = Nothing
+
+    Private Sub AbrirFormularioContenedor(ByVal FormularioHijo As Form)
+
+        Try
+            If (Not (FormularioActivo) Is Nothing) Then
+                FormularioActivo.Close()
+            End If
+
+            FormularioActivo = FormularioHijo
+            FormularioHijo.TopLevel = False
+            FormularioHijo.FormBorderStyle = FormBorderStyle.None
+            FormularioHijo.Dock = DockStyle.Fill
+
+            PanelContenedor.Controls.Add(FormularioHijo)
+            PanelContenedor.Tag = FormularioHijo
+
+            FormularioHijo.BringToFront()
+            FormularioHijo.Show()
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
+
+    End Sub
+
+    Private Sub regresarColores()
+        BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(111, 108, 108)
+        BtnDocentes.FlatAppearance.BorderColor = Color.FromArgb(111, 108, 108)
+        BtnAddMeterias.FlatAppearance.BorderColor = Color.FromArgb(111, 108, 108)
+    End Sub
+
 
 
 End Class
