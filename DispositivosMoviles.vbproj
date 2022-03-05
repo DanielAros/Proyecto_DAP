@@ -73,22 +73,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumnos\Alumnos.Designer.vb">
+      <DependentUpon>Alumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos\Alumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bienvenida\Bienvenida.Designer.vb">
       <DependentUpon>Bienvenida.vb</DependentUpon>
     </Compile>
     <Compile Include="Bienvenida\Bienvenida.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fomrulario Dos\Formulario_Dos.Designer.vb">
-      <DependentUpon>Formulario_Dos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Fomrulario Dos\Formulario_Dos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulario Uno\Formulario_Uno.Designer.vb">
-      <DependentUpon>Formulario_Uno.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formulario Uno\Formulario_Uno.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formulario_Principal\Formulario_Principal.Designer.vb">
@@ -119,16 +113,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Recuperar_Password\Recuperar_Password.Designer.vb">
+      <DependentUpon>Recuperar_Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recuperar_Password\Recuperar_Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Alumnos\Alumnos.resx">
+      <DependentUpon>Alumnos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bienvenida\Bienvenida.resx">
       <DependentUpon>Bienvenida.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fomrulario Dos\Formulario_Dos.resx">
-      <DependentUpon>Formulario_Dos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formulario Uno\Formulario_Uno.resx">
-      <DependentUpon>Formulario_Uno.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario_Principal\Formulario_Principal.resx">
       <DependentUpon>Formulario_Principal.vb</DependentUpon>
@@ -141,6 +138,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recuperar_Password\Recuperar_Password.resx">
+      <DependentUpon>Recuperar_Password.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

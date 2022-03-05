@@ -94,7 +94,7 @@ Public Class Bienvenida
             Me.Close()
             TimerCerrar.Stop()
             'Application.Exit()
-            Formulario_Principal.ShowDialog()
+            Formulario_Principal.Show()
         End If
     End Sub
 

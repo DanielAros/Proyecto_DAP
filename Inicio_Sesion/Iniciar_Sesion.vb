@@ -142,5 +142,14 @@ Public Class Iniciar_Sesion
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
+    Private Sub LinkLabelPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabelPassword.LinkClicked
+        Me.Hide()
+        Recuperar_Password.ShowDialog()
+    End Sub
+
+    Private Sub PanelBarraTitutlo_Paint(sender As Object, e As PaintEventArgs) Handles PanelBarraTitutlo.Paint
+
+    End Sub
+
     'Apuntes: Que es un evento, variable, temporizador, clear. 
 End Class

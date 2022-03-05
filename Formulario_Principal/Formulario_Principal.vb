@@ -13,6 +13,8 @@ Public Class Formulario_Principal
         LabelTipoUsuario.Text = Iniciar_Sesion.Tipo_InicioSesion
 
         Maximizar()
+
+        BtnInicio.PerformClick()
     End Sub
 
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs)
@@ -61,26 +63,39 @@ Public Class Formulario_Principal
     Dim Lx, Ly As Integer 'Location (Lx, Ly)
     Dim Sw, Sh As Integer 'Size 
     Private Sub Maximizar()
-        Lx = Me.Location.X
-        Ly = Me.Location.Y
+        Try
+            Lx = Me.Location.X
+            Ly = Me.Location.Y
 
-        Sw = Me.Size.Width
-        Sh = Me.Size.Height
+            Sw = Me.Size.Width
+            Sh = Me.Size.Height
 
-        Me.Size = Screen.PrimaryScreen.WorkingArea.Size
-        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+            Me.Size = Screen.PrimaryScreen.WorkingArea.Size
+            Me.Location = Screen.PrimaryScreen.WorkingArea.Location
 
-        BtnMaximizar.Visible = False
-        BtnRestaurar.Visible = True
+            BtnMaximizar.Visible = False
+            BtnRestaurar.Visible = True
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
 
     End Sub
 
 
     Private Sub BtnRestaurar_Click(sender As Object, e As EventArgs) Handles BtnRestaurar.Click
-        Me.Size = New Size(Sw, Sh)
-        Me.Location = New Point(Lx, Ly)
-        BtnMaximizar.Visible = True
-        BtnRestaurar.Visible = False
+
+        Try
+            Me.Size = New Size(Sw, Sh)
+            Me.Location = New Point(Lx, Ly)
+            BtnMaximizar.Visible = True
+            BtnRestaurar.Visible = False
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
     End Sub
 
     Private Sub BtnMaximizar_Click(sender As Object, e As EventArgs) Handles BtnMaximizar.Click
@@ -93,19 +108,20 @@ Public Class Formulario_Principal
     '//**************************************************************
 
     Private Sub BtnInicio_Click_1(sender As Object, e As EventArgs) Handles BtnInicio.Click
+        If (Not (FormularioActivo) Is Nothing) Then
+            FormularioActivo.Close()
+            regresarColores()
+        End If
 
-        regresarColores()
-        AbrirFormularioContenedor(New Formulario_Uno)
-        BtnInicio.FlatAppearance.BorderColor = Color.Turquoise
-        'BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(24, 24, 24)
+        BtnInicio.FlatAppearance.BorderColor = Color.Red
+        BtnInicio.FlatAppearance.BorderSize = 2
+        'regresarColores()
+        'AbrirFormularioContenedor(New Formulario_Uno)
+        'BtnInicio.FlatAppearance.BorderColor = Color.Turquoise
+        ''BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(24, 24, 24)
 
     End Sub
 
-    Private Sub BtnDocentes_Click(sender As Object, e As EventArgs) Handles BtnDocentes.Click
-        regresarColores()
-        AbrirFormularioContenedor(New Formulario_Dos)
-        BtnDocentes.FlatAppearance.BorderColor = Color.Turquoise
-    End Sub
 
     Dim FormularioActivo As Form = Nothing
 
@@ -134,12 +150,40 @@ Public Class Formulario_Principal
 
     End Sub
 
-    Private Sub regresarColores()
-        BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(111, 108, 108)
-        BtnDocentes.FlatAppearance.BorderColor = Color.FromArgb(111, 108, 108)
-        BtnAddMeterias.FlatAppearance.BorderColor = Color.FromArgb(111, 108, 108)
+    Private Sub PanelContenedor_Paint(sender As Object, e As PaintEventArgs) Handles PanelContenedor.Paint
+
     End Sub
 
+    Private Sub BtnAlumnos_Click(sender As Object, e As EventArgs) Handles BtnAlumnos.Click
+        regresarColores()
+        AbrirFormularioContenedor(New Alumnos)
+        BtnAlumnos.FlatAppearance.BorderColor = Color.Red
+    End Sub
+
+    Private Sub BtnPromedio_Click(sender As Object, e As EventArgs) Handles BtnPromedio.Click
+        regresarColores()
+        'AbrirFormularioContenedor(New Formulario_Dos)
+        BtnPromedio.FlatAppearance.BorderColor = Color.Red
+    End Sub
+
+    Private Sub regresarColores()
+        BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
+        BtnAlumnos.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
+        BtnPromedio.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
+    End Sub
+
+    Private Sub TimerHora_Tick(sender As Object, e As EventArgs) Handles TimerHora.Tick
+
+        Try
+            LabelHora.Text = DateTime.Now.ToString("HH:mm:ss")
+            LabelFecha.Text = DateTime.Now.ToLongDateString
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
+
+    End Sub
 
 
 End Class

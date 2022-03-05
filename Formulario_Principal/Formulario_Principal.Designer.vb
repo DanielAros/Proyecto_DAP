@@ -33,16 +33,18 @@ Partial Class Formulario_Principal
         Me.PanelBarraMenu = New System.Windows.Forms.Panel()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
-        Me.BtnAddMeterias = New System.Windows.Forms.Button()
-        Me.ImageListIconos = New System.Windows.Forms.ImageList(Me.components)
-        Me.BtnDocentes = New System.Windows.Forms.Button()
+        Me.BtnPromedio = New System.Windows.Forms.Button()
+        Me.BtnAlumnos = New System.Windows.Forms.Button()
         Me.BtnInicio = New System.Windows.Forms.Button()
         Me.LabelCorreo = New System.Windows.Forms.Label()
         Me.LabelNombreFacultad = New System.Windows.Forms.Label()
         Me.LabelNombre = New System.Windows.Forms.Label()
         Me.LabelTipoUsuario = New System.Windows.Forms.Label()
         Me.PanelContenedor = New System.Windows.Forms.Panel()
+        Me.LabelFecha = New System.Windows.Forms.Label()
+        Me.LabelHora = New System.Windows.Forms.Label()
         Me.LabelBienvenido = New System.Windows.Forms.Label()
+        Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.PanelBarraMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
@@ -154,8 +156,8 @@ Partial Class Formulario_Principal
         '
         Me.PanelBarraMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.PanelBarraMenu.Controls.Add(Me.PanelLogo)
-        Me.PanelBarraMenu.Controls.Add(Me.BtnAddMeterias)
-        Me.PanelBarraMenu.Controls.Add(Me.BtnDocentes)
+        Me.PanelBarraMenu.Controls.Add(Me.BtnPromedio)
+        Me.PanelBarraMenu.Controls.Add(Me.BtnAlumnos)
         Me.PanelBarraMenu.Controls.Add(Me.BtnInicio)
         Me.PanelBarraMenu.Controls.Add(Me.LabelCorreo)
         Me.PanelBarraMenu.Controls.Add(Me.LabelNombreFacultad)
@@ -186,71 +188,57 @@ Partial Class Formulario_Principal
         Me.PBLogo.TabIndex = 0
         Me.PBLogo.TabStop = False
         '
-        'BtnAddMeterias
+        'BtnPromedio
         '
-        Me.BtnAddMeterias.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnAddMeterias.FlatAppearance.BorderSize = 0
-        Me.BtnAddMeterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAddMeterias.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddMeterias.ForeColor = System.Drawing.Color.White
-        Me.BtnAddMeterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnAddMeterias.ImageIndex = 1
-        Me.BtnAddMeterias.ImageList = Me.ImageListIconos
-        Me.BtnAddMeterias.Location = New System.Drawing.Point(0, 168)
-        Me.BtnAddMeterias.Margin = New System.Windows.Forms.Padding(1)
-        Me.BtnAddMeterias.Name = "BtnAddMeterias"
-        Me.BtnAddMeterias.Size = New System.Drawing.Size(136, 30)
-        Me.BtnAddMeterias.TabIndex = 2
-        Me.BtnAddMeterias.Text = "ADD MATERIAS"
-        Me.BtnAddMeterias.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnAddMeterias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnAddMeterias.UseVisualStyleBackColor = True
+        Me.BtnPromedio.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnPromedio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnPromedio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnPromedio.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnPromedio.ForeColor = System.Drawing.Color.White
+        Me.BtnPromedio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnPromedio.ImageIndex = 1
+        Me.BtnPromedio.Location = New System.Drawing.Point(0, 168)
+        Me.BtnPromedio.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnPromedio.Name = "BtnPromedio"
+        Me.BtnPromedio.Size = New System.Drawing.Size(136, 30)
+        Me.BtnPromedio.TabIndex = 2
+        Me.BtnPromedio.Text = "PROMEDIO"
+        Me.BtnPromedio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnPromedio.UseVisualStyleBackColor = True
         '
-        'ImageListIconos
+        'BtnAlumnos
         '
-        Me.ImageListIconos.ImageStream = CType(resources.GetObject("ImageListIconos.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageListIconos.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageListIconos.Images.SetKeyName(0, "menu.png")
-        Me.ImageListIconos.Images.SetKeyName(1, "materias.png")
-        Me.ImageListIconos.Images.SetKeyName(2, "personaDocente.png")
-        '
-        'BtnDocentes
-        '
-        Me.BtnDocentes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnDocentes.FlatAppearance.BorderSize = 0
-        Me.BtnDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnDocentes.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDocentes.ForeColor = System.Drawing.Color.White
-        Me.BtnDocentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnDocentes.ImageIndex = 2
-        Me.BtnDocentes.ImageList = Me.ImageListIconos
-        Me.BtnDocentes.Location = New System.Drawing.Point(0, 136)
-        Me.BtnDocentes.Margin = New System.Windows.Forms.Padding(1)
-        Me.BtnDocentes.Name = "BtnDocentes"
-        Me.BtnDocentes.Size = New System.Drawing.Size(136, 30)
-        Me.BtnDocentes.TabIndex = 3
-        Me.BtnDocentes.Text = "DOCENTES"
-        Me.BtnDocentes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnDocentes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnDocentes.UseVisualStyleBackColor = True
+        Me.BtnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnAlumnos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAlumnos.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAlumnos.ForeColor = System.Drawing.Color.White
+        Me.BtnAlumnos.ImageAlign = System.Drawing.ContentAlignment.TopRight
+        Me.BtnAlumnos.ImageIndex = 2
+        Me.BtnAlumnos.Location = New System.Drawing.Point(0, 136)
+        Me.BtnAlumnos.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnAlumnos.Name = "BtnAlumnos"
+        Me.BtnAlumnos.Size = New System.Drawing.Size(136, 30)
+        Me.BtnAlumnos.TabIndex = 3
+        Me.BtnAlumnos.Text = "ALUMNOS"
+        Me.BtnAlumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnAlumnos.UseVisualStyleBackColor = True
         '
         'BtnInicio
         '
         Me.BtnInicio.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnInicio.FlatAppearance.BorderSize = 0
+        Me.BtnInicio.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnInicio.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInicio.ForeColor = System.Drawing.Color.White
+        Me.BtnInicio.Image = CType(resources.GetObject("BtnInicio.Image"), System.Drawing.Image)
         Me.BtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnInicio.ImageIndex = 0
-        Me.BtnInicio.ImageList = Me.ImageListIconos
         Me.BtnInicio.Location = New System.Drawing.Point(0, 104)
         Me.BtnInicio.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnInicio.Name = "BtnInicio"
         Me.BtnInicio.Size = New System.Drawing.Size(136, 30)
         Me.BtnInicio.TabIndex = 8
-        Me.BtnInicio.Text = "INICIO"
-        Me.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnInicio.Text = "      INICIO"
         Me.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnInicio.UseVisualStyleBackColor = True
         '
@@ -305,12 +293,40 @@ Partial Class Formulario_Principal
         'PanelContenedor
         '
         Me.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.PanelContenedor.Controls.Add(Me.LabelFecha)
+        Me.PanelContenedor.Controls.Add(Me.LabelHora)
         Me.PanelContenedor.Controls.Add(Me.LabelBienvenido)
         Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelContenedor.Location = New System.Drawing.Point(136, 25)
         Me.PanelContenedor.Name = "PanelContenedor"
         Me.PanelContenedor.Size = New System.Drawing.Size(569, 387)
         Me.PanelContenedor.TabIndex = 5
+        '
+        'LabelFecha
+        '
+        Me.LabelFecha.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LabelFecha.AutoSize = True
+        Me.LabelFecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.LabelFecha.Font = New System.Drawing.Font("MS PGothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFecha.ForeColor = System.Drawing.Color.White
+        Me.LabelFecha.Location = New System.Drawing.Point(146, 179)
+        Me.LabelFecha.Name = "LabelFecha"
+        Me.LabelFecha.Size = New System.Drawing.Size(258, 19)
+        Me.LabelFecha.TabIndex = 2
+        Me.LabelFecha.Text = "Lunes, 2 de Enero del 2022"
+        '
+        'LabelHora
+        '
+        Me.LabelHora.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LabelHora.AutoSize = True
+        Me.LabelHora.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.LabelHora.Font = New System.Drawing.Font("MS PGothic", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelHora.ForeColor = System.Drawing.Color.White
+        Me.LabelHora.Location = New System.Drawing.Point(213, 130)
+        Me.LabelHora.Name = "LabelHora"
+        Me.LabelHora.Size = New System.Drawing.Size(123, 29)
+        Me.LabelHora.TabIndex = 1
+        Me.LabelHora.Text = "00:00:00"
         '
         'LabelBienvenido
         '
@@ -324,6 +340,10 @@ Partial Class Formulario_Principal
         Me.LabelBienvenido.Size = New System.Drawing.Size(94, 13)
         Me.LabelBienvenido.TabIndex = 0
         Me.LabelBienvenido.Text = "¡BIENVENIDO!"
+        '
+        'TimerHora
+        '
+        Me.TimerHora.Enabled = True
         '
         'Formulario_Principal
         '
@@ -354,16 +374,18 @@ Partial Class Formulario_Principal
     Friend WithEvents PanelBarraMenu As Panel
     Friend WithEvents PBLogo As PictureBox
     Friend WithEvents LabelTipoUsuario As Label
-    Friend WithEvents BtnDocentes As Button
-    Friend WithEvents BtnAddMeterias As Button
+    Friend WithEvents BtnAlumnos As Button
+    Friend WithEvents BtnPromedio As Button
     Friend WithEvents PanelContenedor As Panel
     Friend WithEvents LabelNombreFacultad As Label
     Friend WithEvents LabelCorreo As Label
     Friend WithEvents LabelNombre As Label
     Friend WithEvents BtnInicio As Button
     Friend WithEvents LabelBienvenido As Label
-    Friend WithEvents ImageListIconos As ImageList
     Friend WithEvents BtnMaximizar As Button
     Friend WithEvents BtnRestaurar As Button
     Friend WithEvents PanelLogo As Panel
+    Friend WithEvents LabelFecha As Label
+    Friend WithEvents LabelHora As Label
+    Friend WithEvents TimerHora As Timer
 End Class
