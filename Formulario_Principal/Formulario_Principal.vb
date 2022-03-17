@@ -162,8 +162,10 @@ Public Class Formulario_Principal
 
     Private Sub BtnPromedio_Click(sender As Object, e As EventArgs) Handles BtnPromedio.Click
         regresarColores()
-        'AbrirFormularioContenedor(New Formulario_Dos)
+        AbrirFormularioContenedor(New Alumnos_Promedio)
         BtnPromedio.FlatAppearance.BorderColor = Color.Red
+
+
     End Sub
 
     Private Sub regresarColores()
