@@ -9,10 +9,8 @@ Public Class Iniciar_Sesion
     'Dim Micorreo As String
 
     'Variable publica
-    Public Micorreo As String
-    Public Tipo_InicioSesion As String
-    Public Telefono As String
-    Public Direccion As String
+    Public Correo As String
+    Public Apellido As String
     Public Facultad As String
 
     '**************************************************'
@@ -45,13 +43,30 @@ Public Class Iniciar_Sesion
     End Sub
 
     Private Sub Iniciar_Sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
-        CB_Usuarios.Text = "Seleccione un usuario"
-
-        CB_Usuarios.SelectedIndex = 0
-        TxtPassword.Text = "1234"
+        Enlace()
+        Cargar_Usuarios_En_Combobox()
     End Sub
+
+    '//**************************************************************
+    '// Proceso para cargar usuarios en el combobox
+    '//**************************************************************
+
+    Private Sub Cargar_Usuarios_En_Combobox()
+        Try
+
+            Dim Tabla As New DataTable
+            Dim ConsultaSql As String = "SELECT Nombre From Usuarios"
+            Dim adaptador As New OleDbDataAdapter(ConsultaSql, Conexion)
+            adaptador.Fill(Tabla)
+
+            CB_Usuarios.DataSource = Tabla
+            CB_Usuarios.DisplayMember = "Nombre"
+
+        Catch ex As Exception
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
 
     Private Sub PanelInferior_Paint(sender As Object, e As PaintEventArgs) Handles PanelInferior.Paint
 
@@ -110,21 +125,59 @@ Public Class Iniciar_Sesion
 
     Private Sub CB_Usuarios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Usuarios.SelectedIndexChanged
 
-        If CB_Usuarios.Text = "Daniel Aros" Then
-            Micorreo = "danielaros@gmail.com"
-            Tipo_InicioSesion = "Administrador"
-            Telefono = "4425689215"
-            Direccion = "Av de las ciencias"
-            Facultad = "Informatica"
 
-            '-------------------MENSAJE DE CONFIRMACION------------------------------
-            'MsgBox("El correo del usuario es: " & Micorreo, MsgBoxStyle.OkOnly, "Iniciando Sesion")
-        Else
-            Micorreo = "Correo"
-            Tipo_InicioSesion = "Tipo"
-            Telefono = "Telefono"
-            Direccion = "Direccion"
-        End If
+
+
+
+        'If CB_Usuarios.Text = "Daniel Aros" Then
+
+        '    Micorreo = "danielaros@gmail.com"
+        '    Tipo_InicioSesion = "Administrador"
+        '    Telefono = "4425689215"
+        '    Direccion = "Av de las ciencias"
+        '    Facultad = "Informatica"
+
+        '    '-------------------MENSAJE DE CONFIRMACION------------------------------
+        '    'MsgBox("El correo del usuario es: " & Micorreo, MsgBoxStyle.OkOnly, "Iniciando Sesion")
+        'Else
+        '    Micorreo = "Correo"
+        '    Tipo_InicioSesion = "Tipo"
+        '    Telefono = "Telefono"
+        '    Direccion = "Direccion"
+        'End If
+    End Sub
+
+    '//**************************************************************
+    '// Proceso para cargar datos del usuario seleccionado
+    '//**************************************************************
+
+    Private Sub Cargar_Datos_De_Usuario()
+        Try
+
+            Dim ConsultaSql As String
+            Dim Lista As Long
+            Dim Registro As DataSet
+            Dim adaptador As OleDbDataAdapter
+
+            ConsultaSql = "SELECT Apellido, Correo, Facultad FROM Usuarios WHERE Nombre = '" & CB_Usuarios.Text & "'"
+            adaptador = New OleDbDataAdapter(ConsultaSql, Conexion)
+
+            Registro = New DataSet
+
+            adaptador.Fill(Registro, "Usuarios")
+            Lista = Registro.Tables("Usuarios").Rows.Count
+
+            If Lista <> 0 Then
+
+                Apellido = Registro.Tables("Usuarios").Rows(0).Item("Apellido")
+                Correo = Registro.Tables("Usuarios").Rows(0).Item("Correo")
+                Facultad = Registro.Tables("Usuarios").Rows(0).Item("Facultad")
+
+            End If
+
+        Catch ex As Exception
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+        End Try
     End Sub
 
     'Si eliminamos la palabra reservada Private, podemos usar este proceso en otro formulario

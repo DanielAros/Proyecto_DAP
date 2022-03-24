@@ -175,7 +175,6 @@ Partial Class Iniciar_Sesion
         'CB_Usuarios
         '
         Me.CB_Usuarios.FormattingEnabled = True
-        Me.CB_Usuarios.Items.AddRange(New Object() {"Daniel Aros", "Elias Ramirez", "Maria Perez"})
         Me.CB_Usuarios.Location = New System.Drawing.Point(28, 195)
         Me.CB_Usuarios.Name = "CB_Usuarios"
         Me.CB_Usuarios.Size = New System.Drawing.Size(208, 21)

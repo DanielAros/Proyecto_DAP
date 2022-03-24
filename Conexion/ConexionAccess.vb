@@ -5,10 +5,12 @@
 Imports System.Data
 Imports System.Data.OleDb
 
-Module Conexion
+Module ConexionAccess
 
     Public Ruta As String = Application.StartupPath
     Public Conexion As New OleDbConnection
+
+
 
     Sub Enlace()
         Try
