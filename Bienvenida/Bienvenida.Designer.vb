@@ -36,8 +36,8 @@ Partial Class Bienvenida
         Me.TimerAbrir = New System.Windows.Forms.Timer(Me.components)
         Me.TimerCerrar = New System.Windows.Forms.Timer(Me.components)
         Me.LabelCorreo = New System.Windows.Forms.Label()
-        Me.LabelTelefono = New System.Windows.Forms.Label()
-        Me.LabelDireccion = New System.Windows.Forms.Label()
+        Me.LabelApellido = New System.Windows.Forms.Label()
+        Me.LabelFacultad = New System.Windows.Forms.Label()
         CType(Me.PBLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.SuspendLayout()
@@ -181,29 +181,29 @@ Partial Class Bienvenida
         Me.LabelCorreo.TabIndex = 13
         Me.LabelCorreo.Text = "Correo"
         '
-        'LabelTelefono
+        'LabelApellido
         '
-        Me.LabelTelefono.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.LabelTelefono.AutoSize = True
-        Me.LabelTelefono.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTelefono.ForeColor = System.Drawing.Color.White
-        Me.LabelTelefono.Location = New System.Drawing.Point(236, 190)
-        Me.LabelTelefono.Name = "LabelTelefono"
-        Me.LabelTelefono.Size = New System.Drawing.Size(71, 29)
-        Me.LabelTelefono.TabIndex = 14
-        Me.LabelTelefono.Text = "Telefono"
+        Me.LabelApellido.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelApellido.AutoSize = True
+        Me.LabelApellido.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelApellido.ForeColor = System.Drawing.Color.White
+        Me.LabelApellido.Location = New System.Drawing.Point(236, 190)
+        Me.LabelApellido.Name = "LabelApellido"
+        Me.LabelApellido.Size = New System.Drawing.Size(65, 29)
+        Me.LabelApellido.TabIndex = 14
+        Me.LabelApellido.Text = "Apellido"
         '
-        'LabelDireccion
+        'LabelFacultad
         '
-        Me.LabelDireccion.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.LabelDireccion.AutoSize = True
-        Me.LabelDireccion.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelDireccion.ForeColor = System.Drawing.Color.White
-        Me.LabelDireccion.Location = New System.Drawing.Point(237, 222)
-        Me.LabelDireccion.Name = "LabelDireccion"
-        Me.LabelDireccion.Size = New System.Drawing.Size(76, 29)
-        Me.LabelDireccion.TabIndex = 15
-        Me.LabelDireccion.Text = "Direccion"
+        Me.LabelFacultad.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelFacultad.AutoSize = True
+        Me.LabelFacultad.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFacultad.ForeColor = System.Drawing.Color.White
+        Me.LabelFacultad.Location = New System.Drawing.Point(237, 222)
+        Me.LabelFacultad.Name = "LabelFacultad"
+        Me.LabelFacultad.Size = New System.Drawing.Size(70, 29)
+        Me.LabelFacultad.TabIndex = 15
+        Me.LabelFacultad.Text = "Facultad"
         '
         'Bienvenida
         '
@@ -211,8 +211,8 @@ Partial Class Bienvenida
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(657, 311)
-        Me.Controls.Add(Me.LabelDireccion)
-        Me.Controls.Add(Me.LabelTelefono)
+        Me.Controls.Add(Me.LabelFacultad)
+        Me.Controls.Add(Me.LabelApellido)
         Me.Controls.Add(Me.LabelCorreo)
         Me.Controls.Add(Me.LabelCargando)
         Me.Controls.Add(Me.ProgressBarCargando)
@@ -243,6 +243,6 @@ Partial Class Bienvenida
     Friend WithEvents TimerAbrir As Timer
     Friend WithEvents TimerCerrar As Timer
     Friend WithEvents LabelCorreo As Label
-    Friend WithEvents LabelTelefono As Label
-    Friend WithEvents LabelDireccion As Label
+    Friend WithEvents LabelApellido As Label
+    Friend WithEvents LabelFacultad As Label
 End Class

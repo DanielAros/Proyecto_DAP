@@ -8,9 +8,9 @@ Public Class Bienvenida
 
     Private Sub Bienvenida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LabelNombre.Text = Iniciar_Sesion.CB_Usuarios.Text
-        LabelDireccion.Text = Iniciar_Sesion.Direccion
-        LabelTelefono.Text = Iniciar_Sesion.Telefono
-        LabelCorreo.Text = Iniciar_Sesion.Micorreo
+        LabelFacultad.Text = Iniciar_Sesion.Facultad
+        LabelApellido.Text = Iniciar_Sesion.Apellido
+        LabelCorreo.Text = Iniciar_Sesion.Correo
 
 
         ProgressBarCargando.Value = 0

@@ -8,9 +8,8 @@ Public Class Formulario_Principal
 
     Private Sub Formulario_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LabelNombre.Text = Iniciar_Sesion.CB_Usuarios.Text
-        LabelCorreo.Text = Iniciar_Sesion.Micorreo
+        LabelCorreo.Text = Iniciar_Sesion.Correo
         LabelNombreFacultad.Text = Iniciar_Sesion.Facultad
-        LabelTipoUsuario.Text = Iniciar_Sesion.Tipo_InicioSesion
 
         Maximizar()
 

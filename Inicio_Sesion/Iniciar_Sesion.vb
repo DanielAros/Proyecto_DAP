@@ -74,23 +74,50 @@ Public Class Iniciar_Sesion
 
     Private Sub ButtonAceptar_Click(sender As Object, e As EventArgs) Handles ButtonAceptar.Click
 
-        If CB_Usuarios.Text = "Daniel Aros" And TxtPassword.Text = "1234" Or
-           CB_Usuarios.Text = "Elias Ramirez" And TxtPassword.Text = "123" Or
-           CB_Usuarios.Text = "Maria Perez" And TxtPassword.Text = "12" Then
-
-            Me.Hide()
-            'Bienvenida.Show() se sobreponen los formularios
-            Bienvenida.ShowDialog()
+        Try
+            Dim ConsultaSql As String
+            Dim Adaptador As New OleDbDataAdapter
+            Dim Lector As OleDb.OleDbDataReader
+            Dim Comando As New OleDb.OleDbCommand
 
 
-            '############# Mensaje de confirmacion #################'
-            'MsgBox("Inicio sesion con exito", MsgBoxStyle.OkOnly, "Inicio Sesion")
-        Else
-            '############# Mensaje de error #################'
-            MsgBox("Contraseña incorrecta", MsgBoxStyle.Critical, "Inicio Sesion")
-            TxtPassword.Clear()
-            TxtPassword.Focus()
-        End If
+            ConsultaSql = "SELECT * FROM Usuarios Where Nombre = '" & CB_Usuarios.Text & "' AND Clave = '" & TxtPassword.Text & "'"
+            Comando = New OleDbCommand(ConsultaSql, Conexion)
+            Adaptador.SelectCommand = Comando
+            Lector = Comando.ExecuteReader
+
+            If Lector.Read = True Then
+                '//Instrucciones si los datos coinciden
+                Me.Hide()
+                Bienvenida.ShowDialog()
+            Else
+                '//Instrucciones si los datos no coinciden
+                '############# Mensaje de error #################'
+                MsgBox("Contraseña incorrecta", MsgBoxStyle.Critical, "Inicio Sesion")
+                TxtPassword.Clear()
+            End If
+
+        Catch ex As Exception
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+        End Try
+
+        'If CB_Usuarios.Text = "Daniel Aros" And TxtPassword.Text = "1234" Or
+        '   CB_Usuarios.Text = "Elias Ramirez" And TxtPassword.Text = "123" Or
+        '   CB_Usuarios.Text = "Maria Perez" And TxtPassword.Text = "12" Then
+
+        '    Me.Hide()
+        '    'Bienvenida.Show() se sobreponen los formularios
+        '    Bienvenida.ShowDialog()
+
+
+        '    '############# Mensaje de confirmacion #################'
+        '    'MsgBox("Inicio sesion con exito", MsgBoxStyle.OkOnly, "Inicio Sesion")
+        'Else
+        '    '############# Mensaje de error #################'
+        '    MsgBox("Contraseña incorrecta", MsgBoxStyle.Critical, "Inicio Sesion")
+        '    TxtPassword.Clear()
+        '    TxtPassword.Focus()
+        'End If
 
         'TxtPassword.PasswordChar = ""
         'LabelTitulo.Text = "Daniel Aros"
@@ -125,7 +152,7 @@ Public Class Iniciar_Sesion
 
     Private Sub CB_Usuarios_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_Usuarios.SelectedIndexChanged
 
-
+        Cargar_Datos_De_Usuario()
 
 
 
