@@ -42,4 +42,12 @@
             e.Handled = True
         End If
     End Sub
+
+    Private Sub TxtParcial1_TextChanged(sender As Object, e As EventArgs) Handles TxtParcial1.TextChanged
+
+    End Sub
+
+    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) Handles ButtonLimpiar.Click
+
+    End Sub
 End Class
