@@ -32,12 +32,19 @@
 
                 TxtPromedio.Text = Promedio
 
-                If Promedio > 6 Then
+                If Promedio >= 6 Then
                     'Mensaje de confirmacion
                     MsgBox("El alumno: " & TxtNombre.Text & " , de la facultad de: " & TxtFacultad.Text & " ,del semestre: " & TxtSemestre.Text & " , obtuvo un promedio de: " & Promedio & " , Esta aprobado." & "", MsgBoxStyle.OkOnly, "Promedio")
                 Else
-                    'Mensaje de confirmacion
-                    MsgBox("El alumno: " & TxtNombre.Text & " , de la facultad de: " & TxtFacultad.Text & " ,del semestre: " & TxtSemestre.Text & " , obtuvo un promedio de: " & Promedio & ", Esta reprobado." & "", MsgBoxStyle.OkOnly, "Promedio")
+                    If Promedio >= 1 Then
+                        'Mensaje de confirmacion
+                        MsgBox("El alumno: " & TxtNombre.Text & " , de la facultad de: " & TxtFacultad.Text & " ,del semestre: " & TxtSemestre.Text & " , obtuvo un promedio de: " & Promedio & ", Esta reprobado." & "", MsgBoxStyle.OkOnly, "Promedio")
+                    Else
+                        '-----------------MENSAJE---------------------------------------
+                        MsgBox("Numero invalido, ingresa informacion correcta", MsgBoxStyle.Critical, "Promedio")
+                        '------------------------------------------------------------------------
+                    End If
+
                 End If
 
 

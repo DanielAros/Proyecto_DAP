@@ -161,17 +161,24 @@ Public Class Formulario_Principal
 
     Private Sub BtnPromedio_Click(sender As Object, e As EventArgs) Handles BtnPromedio.Click
         regresarColores()
-        'AbrirFormularioContenedor(New Alumnos_Promedio)
-        AbrirFormularioContenedor(New Formulario_Promedio)
+        AbrirFormularioContenedor(New Alumnos_Promedio)
         BtnPromedio.FlatAppearance.BorderColor = Color.Red
 
 
+    End Sub
+
+    Private Sub PromedioCondicional_Click(sender As Object, e As EventArgs) Handles PromedioCondicional.Click
+        regresarColores()
+        'AbrirFormularioContenedor(New Alumnos_Promedio)
+        AbrirFormularioContenedor(New Formulario_Promedio)
+        PromedioCondicional.FlatAppearance.BorderColor = Color.Red
     End Sub
 
     Private Sub regresarColores()
         BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
         BtnAlumnos.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
         BtnPromedio.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
+        PromedioCondicional.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
     End Sub
 
     Private Sub TimerHora_Tick(sender As Object, e As EventArgs) Handles TimerHora.Tick
