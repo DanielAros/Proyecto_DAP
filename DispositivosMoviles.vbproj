@@ -132,6 +132,12 @@
     <Compile Include="Recuperar_Password\Recuperar_Password.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registro Alumno\Registro_Alumno.Designer.vb">
+      <DependentUpon>Registro_Alumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registro Alumno\Registro_Alumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Alumnos\Alumnos.resx">
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recuperar_Password\Recuperar_Password.resx">
       <DependentUpon>Recuperar_Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro Alumno\Registro_Alumno.resx">
+      <DependentUpon>Registro_Alumno.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
