@@ -23,14 +23,6 @@ Partial Class Registro_Alumno
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GridAlumnos = New System.Windows.Forms.DataGridView()
-        Me.Expediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Fecha_Nacimiento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Facultad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Semestre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelInferior = New System.Windows.Forms.Panel()
         Me.ButtonLimpiar = New System.Windows.Forms.Button()
         Me.ButtonRegistrar = New System.Windows.Forms.Button()
@@ -50,58 +42,22 @@ Partial Class Registro_Alumno
         Me.LabelSemestre = New System.Windows.Forms.Label()
         Me.Cbo_Semestre = New System.Windows.Forms.ComboBox()
         Me.Cbo_Genero = New System.Windows.Forms.ComboBox()
+        Me.LabelTotal = New System.Windows.Forms.Label()
+        Me.TxtTotal = New System.Windows.Forms.TextBox()
         CType(Me.GridAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelInferior.SuspendLayout()
         Me.SuspendLayout()
         '
         'GridAlumnos
         '
+        Me.GridAlumnos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GridAlumnos.BackgroundColor = System.Drawing.SystemColors.Control
         Me.GridAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GridAlumnos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Expediente, Me.Nombre, Me.Apellido, Me.Genero, Me.Fecha_Nacimiento, Me.Direccion, Me.Facultad, Me.Semestre})
         Me.GridAlumnos.Location = New System.Drawing.Point(12, 268)
         Me.GridAlumnos.Name = "GridAlumnos"
         Me.GridAlumnos.Size = New System.Drawing.Size(776, 112)
         Me.GridAlumnos.TabIndex = 0
-        '
-        'Expediente
-        '
-        Me.Expediente.HeaderText = "Expediente"
-        Me.Expediente.Name = "Expediente"
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        '
-        'Apellido
-        '
-        Me.Apellido.HeaderText = "Apellido"
-        Me.Apellido.Name = "Apellido"
-        '
-        'Genero
-        '
-        Me.Genero.HeaderText = "Genero"
-        Me.Genero.Name = "Genero"
-        '
-        'Fecha_Nacimiento
-        '
-        Me.Fecha_Nacimiento.HeaderText = "Fecha_Nacimiento"
-        Me.Fecha_Nacimiento.Name = "Fecha_Nacimiento"
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "Direccion"
-        Me.Direccion.Name = "Direccion"
-        '
-        'Facultad
-        '
-        Me.Facultad.HeaderText = "Facultad"
-        Me.Facultad.Name = "Facultad"
-        '
-        'Semestre
-        '
-        Me.Semestre.HeaderText = "Semestre"
-        Me.Semestre.Name = "Semestre"
         '
         'PanelInferior
         '
@@ -109,9 +65,9 @@ Partial Class Registro_Alumno
         Me.PanelInferior.Controls.Add(Me.ButtonLimpiar)
         Me.PanelInferior.Controls.Add(Me.ButtonRegistrar)
         Me.PanelInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 400)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 407)
         Me.PanelInferior.Name = "PanelInferior"
-        Me.PanelInferior.Size = New System.Drawing.Size(800, 50)
+        Me.PanelInferior.Size = New System.Drawing.Size(794, 50)
         Me.PanelInferior.TabIndex = 39
         '
         'ButtonLimpiar
@@ -123,7 +79,7 @@ Partial Class Registro_Alumno
         Me.ButtonLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
         Me.ButtonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonLimpiar.ForeColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.Location = New System.Drawing.Point(564, 14)
+        Me.ButtonLimpiar.Location = New System.Drawing.Point(558, 14)
         Me.ButtonLimpiar.Name = "ButtonLimpiar"
         Me.ButtonLimpiar.Size = New System.Drawing.Size(94, 24)
         Me.ButtonLimpiar.TabIndex = 1
@@ -139,7 +95,7 @@ Partial Class Registro_Alumno
         Me.ButtonRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
         Me.ButtonRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonRegistrar.ForeColor = System.Drawing.Color.White
-        Me.ButtonRegistrar.Location = New System.Drawing.Point(682, 14)
+        Me.ButtonRegistrar.Location = New System.Drawing.Point(676, 14)
         Me.ButtonRegistrar.Name = "ButtonRegistrar"
         Me.ButtonRegistrar.Size = New System.Drawing.Size(94, 24)
         Me.ButtonRegistrar.TabIndex = 0
@@ -229,7 +185,7 @@ Partial Class Registro_Alumno
         '
         Me.TxtNombre.Location = New System.Drawing.Point(364, 30)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(294, 20)
+        Me.TxtNombre.Size = New System.Drawing.Size(266, 20)
         Me.TxtNombre.TabIndex = 40
         Me.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -248,7 +204,7 @@ Partial Class Registro_Alumno
         '
         Me.TxtDireccion.Location = New System.Drawing.Point(364, 147)
         Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(294, 20)
+        Me.TxtDireccion.Size = New System.Drawing.Size(266, 20)
         Me.TxtDireccion.TabIndex = 50
         Me.TxtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -289,23 +245,45 @@ Partial Class Registro_Alumno
         Me.Cbo_Semestre.Items.AddRange(New Object() {"1-Semestre", "2-Semestre", "3-Semestre", "4-Semestre", "5-Semestre", "6-Semestre"})
         Me.Cbo_Semestre.Location = New System.Drawing.Point(364, 199)
         Me.Cbo_Semestre.Name = "Cbo_Semestre"
-        Me.Cbo_Semestre.Size = New System.Drawing.Size(294, 21)
+        Me.Cbo_Semestre.Size = New System.Drawing.Size(266, 21)
         Me.Cbo_Semestre.TabIndex = 54
         '
         'Cbo_Genero
         '
         Me.Cbo_Genero.FormattingEnabled = True
-        Me.Cbo_Genero.Items.AddRange(New Object() {"1-Semestre", "2-Semestre", "3-Semestre", "4-Semestre", "5-Semestre", "6-Semestre"})
+        Me.Cbo_Genero.Items.AddRange(New Object() {"Hombre", "Mujer", "Indefinido"})
         Me.Cbo_Genero.Location = New System.Drawing.Point(364, 89)
         Me.Cbo_Genero.Name = "Cbo_Genero"
-        Me.Cbo_Genero.Size = New System.Drawing.Size(294, 21)
+        Me.Cbo_Genero.Size = New System.Drawing.Size(266, 21)
         Me.Cbo_Genero.TabIndex = 56
+        '
+        'LabelTotal
+        '
+        Me.LabelTotal.Font = New System.Drawing.Font("MS Gothic", 8.0!)
+        Me.LabelTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.LabelTotal.Location = New System.Drawing.Point(660, 57)
+        Me.LabelTotal.Name = "LabelTotal"
+        Me.LabelTotal.Size = New System.Drawing.Size(101, 18)
+        Me.LabelTotal.TabIndex = 58
+        Me.LabelTotal.Text = "Total"
+        Me.LabelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TxtTotal
+        '
+        Me.TxtTotal.Location = New System.Drawing.Point(662, 78)
+        Me.TxtTotal.Name = "TxtTotal"
+        Me.TxtTotal.ReadOnly = True
+        Me.TxtTotal.Size = New System.Drawing.Size(99, 20)
+        Me.TxtTotal.TabIndex = 57
+        Me.TxtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Registro_Alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(794, 457)
+        Me.Controls.Add(Me.LabelTotal)
+        Me.Controls.Add(Me.TxtTotal)
         Me.Controls.Add(Me.Cbo_Genero)
         Me.Controls.Add(Me.LabelSemestre)
         Me.Controls.Add(Me.Cbo_Semestre)
@@ -324,6 +302,7 @@ Partial Class Registro_Alumno
         Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.PanelInferior)
         Me.Controls.Add(Me.GridAlumnos)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Registro_Alumno"
         Me.Text = "Registro_Alumno"
         CType(Me.GridAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
@@ -334,14 +313,6 @@ Partial Class Registro_Alumno
     End Sub
 
     Friend WithEvents GridAlumnos As DataGridView
-    Friend WithEvents Expediente As DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As DataGridViewTextBoxColumn
-    Friend WithEvents Apellido As DataGridViewTextBoxColumn
-    Friend WithEvents Genero As DataGridViewTextBoxColumn
-    Friend WithEvents Fecha_Nacimiento As DataGridViewTextBoxColumn
-    Friend WithEvents Direccion As DataGridViewTextBoxColumn
-    Friend WithEvents Facultad As DataGridViewTextBoxColumn
-    Friend WithEvents Semestre As DataGridViewTextBoxColumn
     Friend WithEvents PanelInferior As Panel
     Friend WithEvents ButtonLimpiar As Button
     Friend WithEvents ButtonRegistrar As Button
@@ -361,4 +332,6 @@ Partial Class Registro_Alumno
     Friend WithEvents LabelSemestre As Label
     Friend WithEvents Cbo_Semestre As ComboBox
     Friend WithEvents Cbo_Genero As ComboBox
+    Friend WithEvents LabelTotal As Label
+    Friend WithEvents TxtTotal As TextBox
 End Class

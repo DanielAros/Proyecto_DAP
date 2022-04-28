@@ -31,6 +31,8 @@ Partial Class Formulario_Principal
         Me.ButtonMinimizar = New System.Windows.Forms.Button()
         Me.ButtonSalir = New System.Windows.Forms.Button()
         Me.PanelBarraMenu = New System.Windows.Forms.Panel()
+        Me.BtnRegistroAlumno = New System.Windows.Forms.Button()
+        Me.PromedioCondicional = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.PBLogo = New System.Windows.Forms.PictureBox()
         Me.BtnPromedio = New System.Windows.Forms.Button()
@@ -45,7 +47,6 @@ Partial Class Formulario_Principal
         Me.LabelHora = New System.Windows.Forms.Label()
         Me.LabelBienvenido = New System.Windows.Forms.Label()
         Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
-        Me.PromedioCondicional = New System.Windows.Forms.Button()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.PanelBarraMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
@@ -156,6 +157,7 @@ Partial Class Formulario_Principal
         'PanelBarraMenu
         '
         Me.PanelBarraMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.PanelBarraMenu.Controls.Add(Me.BtnRegistroAlumno)
         Me.PanelBarraMenu.Controls.Add(Me.PromedioCondicional)
         Me.PanelBarraMenu.Controls.Add(Me.PanelLogo)
         Me.PanelBarraMenu.Controls.Add(Me.BtnPromedio)
@@ -170,6 +172,42 @@ Partial Class Formulario_Principal
         Me.PanelBarraMenu.Name = "PanelBarraMenu"
         Me.PanelBarraMenu.Size = New System.Drawing.Size(136, 387)
         Me.PanelBarraMenu.TabIndex = 4
+        '
+        'BtnRegistroAlumno
+        '
+        Me.BtnRegistroAlumno.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRegistroAlumno.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnRegistroAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRegistroAlumno.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRegistroAlumno.ForeColor = System.Drawing.Color.White
+        Me.BtnRegistroAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnRegistroAlumno.ImageIndex = 1
+        Me.BtnRegistroAlumno.Location = New System.Drawing.Point(0, 232)
+        Me.BtnRegistroAlumno.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnRegistroAlumno.Name = "BtnRegistroAlumno"
+        Me.BtnRegistroAlumno.Size = New System.Drawing.Size(136, 30)
+        Me.BtnRegistroAlumno.TabIndex = 11
+        Me.BtnRegistroAlumno.Text = "REGISTRO ALUMNO"
+        Me.BtnRegistroAlumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnRegistroAlumno.UseVisualStyleBackColor = True
+        '
+        'PromedioCondicional
+        '
+        Me.PromedioCondicional.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PromedioCondicional.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.PromedioCondicional.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PromedioCondicional.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PromedioCondicional.ForeColor = System.Drawing.Color.White
+        Me.PromedioCondicional.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PromedioCondicional.ImageIndex = 1
+        Me.PromedioCondicional.Location = New System.Drawing.Point(3, 200)
+        Me.PromedioCondicional.Margin = New System.Windows.Forms.Padding(1)
+        Me.PromedioCondicional.Name = "PromedioCondicional"
+        Me.PromedioCondicional.Size = New System.Drawing.Size(136, 30)
+        Me.PromedioCondicional.TabIndex = 10
+        Me.PromedioCondicional.Text = "PROM CONDIC"
+        Me.PromedioCondicional.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.PromedioCondicional.UseVisualStyleBackColor = True
         '
         'PanelLogo
         '
@@ -347,24 +385,6 @@ Partial Class Formulario_Principal
         '
         Me.TimerHora.Enabled = True
         '
-        'PromedioCondicional
-        '
-        Me.PromedioCondicional.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PromedioCondicional.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.PromedioCondicional.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PromedioCondicional.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PromedioCondicional.ForeColor = System.Drawing.Color.White
-        Me.PromedioCondicional.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PromedioCondicional.ImageIndex = 1
-        Me.PromedioCondicional.Location = New System.Drawing.Point(3, 200)
-        Me.PromedioCondicional.Margin = New System.Windows.Forms.Padding(1)
-        Me.PromedioCondicional.Name = "PromedioCondicional"
-        Me.PromedioCondicional.Size = New System.Drawing.Size(136, 30)
-        Me.PromedioCondicional.TabIndex = 10
-        Me.PromedioCondicional.Text = "PROM CONDIC"
-        Me.PromedioCondicional.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.PromedioCondicional.UseVisualStyleBackColor = True
-        '
         'Formulario_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -409,4 +429,5 @@ Partial Class Formulario_Principal
     Friend WithEvents LabelHora As Label
     Friend WithEvents TimerHora As Timer
     Friend WithEvents PromedioCondicional As Button
+    Friend WithEvents BtnRegistroAlumno As Button
 End Class

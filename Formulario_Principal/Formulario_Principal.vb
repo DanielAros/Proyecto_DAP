@@ -174,11 +174,18 @@ Public Class Formulario_Principal
         PromedioCondicional.FlatAppearance.BorderColor = Color.Red
     End Sub
 
+    Private Sub BtnRegistroAlumno_Click(sender As Object, e As EventArgs) Handles BtnRegistroAlumno.Click
+        regresarColores()
+        AbrirFormularioContenedor(New Registro_Alumno)
+        BtnRegistroAlumno.FlatAppearance.BorderColor = Color.Red
+    End Sub
+
     Private Sub regresarColores()
         BtnInicio.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
         BtnAlumnos.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
         BtnPromedio.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
         PromedioCondicional.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
+        BtnRegistroAlumno.FlatAppearance.BorderColor = Color.FromArgb(46, 48, 60)
     End Sub
 
     Private Sub TimerHora_Tick(sender As Object, e As EventArgs) Handles TimerHora.Tick

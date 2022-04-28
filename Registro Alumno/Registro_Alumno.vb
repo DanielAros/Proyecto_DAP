@@ -1,36 +1,45 @@
-﻿
+﻿'----------------- Se importan dll para DBA access y codigos necesarios ------------------
 Imports System.Data.OleDb
 
 Public Class Registro_Alumno
     Private Sub Registro_Alumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Mostrar_Alumnos()
     End Sub
 
+
+    '------------------ PROCESO PARA MOSTRAR INFORMACION INFORMACION DE LA TABLA ALUMNOS EN EL DATAGRID
     Private Sub Mostrar_Alumnos()
-        Dim Paquete As New DataSet
-        Dim ConsultaSql As String
-        'Dim Adaptador As New OleDbDataAdapter
+        Try
+            Dim Paquete As New DataSet
+            Dim ConsultaSql As String
+            Dim Adaptador As New OleDbDataAdapter
 
-        ConsultaSql = "SELECT * FROM Alumnos ORDER BY "
+            ConsultaSql = "SELECT * FROM Alumnos ORDER BY Apellido Asc"
+            Adaptador = New OleDbDataAdapter(ConsultaSql, Conexion)
+            Paquete.Tables.Add("Alumnos")
+            Adaptador.Fill(Paquete.Tables("Alumnos"))
 
+            GridAlumnos.DataSource = Paquete.Tables("Alumnos")
+            GridAlumnos.AllowUserToAddRows = False
 
-        '//Conteo de registros de alumnos
-        ''TxtTotal.Text = GridAlumnos.Rows.Count
+            '/ Conteo de registros de alumnos 
+            TxtTotal.Text = GridAlumnos.Rows.Count
 
-        '// Tamaño de columnas en un datagrid
-        'GridAlumnos.Columns("Nombre").Width = 150
-        'GridAlumnos.Columns("Direccion").Width = 200
-        'GridAlumnos.Columns("Correo").Width = 150
+            '/ Tamaño de columnas en un dataGrid
+            GridAlumnos.Columns("Nombre").Width = 150
+            GridAlumnos.Columns("Direccion").Width = 200
 
-        '// Ocultar columnas en un datagrid
-        GridAlumnos.Columns("Genero").Visible = False
-        GridAlumnos.Columns("Direccion").Visible = False
-
+            '/ Ocultar columnas en un dataGrid
+            GridAlumnos.Columns("Genero").Visible = False
+            GridAlumnos.Columns("Direccion").Visible = False
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
     End Sub
 
     Private Sub ButtonRegistrar_Click(sender As Object, e As EventArgs) Handles ButtonRegistrar.Click
-
-
         Registro_De_Alumnos()
     End Sub
 
@@ -38,8 +47,6 @@ Public Class Registro_Alumno
     '//####################################
     '// Proceso para agregar un nuevo usuario a la base de datos
     '//####################################
-
-
     Dim Comandos As New OleDb.OleDbCommand
 
     Private Sub Registro_De_Alumnos()
@@ -59,12 +66,15 @@ Public Class Registro_Alumno
             Comandos.Parameters.AddWithValue("@Semestre", Cbo_Semestre.Text)
 
             Comandos.ExecuteNonQuery() 'Ejecuta la sentencia de instrucciones
-
-
-
         Catch ex As Exception
-
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
         End Try
+
+    End Sub
+
+    Private Sub GridAlumnos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles GridAlumnos.CellContentClick
 
     End Sub
 End Class
