@@ -56,6 +56,7 @@ Partial Class Registro_Alumno
         Me.GridAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GridAlumnos.Location = New System.Drawing.Point(12, 268)
         Me.GridAlumnos.Name = "GridAlumnos"
+        Me.GridAlumnos.ReadOnly = True
         Me.GridAlumnos.Size = New System.Drawing.Size(776, 112)
         Me.GridAlumnos.TabIndex = 0
         '
