@@ -45,9 +45,9 @@ Partial Class Alumnos_Promedio
         '
         Me.LabelTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelTitulo.AutoSize = True
-        Me.LabelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.LabelTitulo.BackColor = System.Drawing.SystemColors.Control
         Me.LabelTitulo.Font = New System.Drawing.Font("MS PGothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTitulo.ForeColor = System.Drawing.Color.White
+        Me.LabelTitulo.ForeColor = System.Drawing.Color.Black
         Me.LabelTitulo.Location = New System.Drawing.Point(274, 28)
         Me.LabelTitulo.Name = "LabelTitulo"
         Me.LabelTitulo.Size = New System.Drawing.Size(239, 19)

@@ -53,10 +53,12 @@ Partial Class Registro_Alumno
         Me.GridAlumnos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridAlumnos.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.GridAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.GridAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GridAlumnos.Location = New System.Drawing.Point(12, 268)
         Me.GridAlumnos.Name = "GridAlumnos"
         Me.GridAlumnos.ReadOnly = True
+        Me.GridAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.GridAlumnos.Size = New System.Drawing.Size(776, 112)
         Me.GridAlumnos.TabIndex = 0
         '

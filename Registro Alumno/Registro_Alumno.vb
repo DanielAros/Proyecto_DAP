@@ -20,7 +20,7 @@ Public Class Registro_Alumno
             Adaptador.Fill(Paquete.Tables("Alumnos"))
 
             GridAlumnos.DataSource = Paquete.Tables("Alumnos")
-            GridAlumnos.AllowUserToAddRows = False
+            GridAlumnos.AllowUserToAddRows = False 'Permite que no se agregue una fila en blanco
 
             '/ Conteo de registros de alumnos 
             TxtTotal.Text = GridAlumnos.Rows.Count

@@ -28,16 +28,16 @@ Partial Class Alumnos
         Me.LabelApellido = New System.Windows.Forms.Label()
         Me.LabelTitulo = New System.Windows.Forms.Label()
         Me.PanelInferior = New System.Windows.Forms.Panel()
+        Me.ButtonLimpiar = New System.Windows.Forms.Button()
         Me.ButtonRegistrar = New System.Windows.Forms.Button()
         Me.GridAlumnos = New System.Windows.Forms.DataGridView()
-        Me.LabelGenero = New System.Windows.Forms.Label()
-        Me.LabelExpediente = New System.Windows.Forms.Label()
-        Me.TxtExpediente = New System.Windows.Forms.TextBox()
         Me.Expediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Genero = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ButtonLimpiar = New System.Windows.Forms.Button()
+        Me.LabelGenero = New System.Windows.Forms.Label()
+        Me.LabelExpediente = New System.Windows.Forms.Label()
+        Me.TxtExpediente = New System.Windows.Forms.TextBox()
         Me.CB_Genero = New System.Windows.Forms.ComboBox()
         Me.PanelInferior.SuspendLayout()
         CType(Me.GridAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,9 +85,9 @@ Partial Class Alumnos
         '
         Me.LabelTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelTitulo.AutoSize = True
-        Me.LabelTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.LabelTitulo.BackColor = System.Drawing.SystemColors.Control
         Me.LabelTitulo.Font = New System.Drawing.Font("MS PGothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTitulo.ForeColor = System.Drawing.Color.White
+        Me.LabelTitulo.ForeColor = System.Drawing.Color.Black
         Me.LabelTitulo.Location = New System.Drawing.Point(274, 19)
         Me.LabelTitulo.Name = "LabelTitulo"
         Me.LabelTitulo.Size = New System.Drawing.Size(235, 19)
@@ -104,6 +104,22 @@ Partial Class Alumnos
         Me.PanelInferior.Name = "PanelInferior"
         Me.PanelInferior.Size = New System.Drawing.Size(800, 50)
         Me.PanelInferior.TabIndex = 9
+        '
+        'ButtonLimpiar
+        '
+        Me.ButtonLimpiar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonLimpiar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.ButtonLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.ButtonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLimpiar.ForeColor = System.Drawing.Color.White
+        Me.ButtonLimpiar.Location = New System.Drawing.Point(564, 14)
+        Me.ButtonLimpiar.Name = "ButtonLimpiar"
+        Me.ButtonLimpiar.Size = New System.Drawing.Size(94, 24)
+        Me.ButtonLimpiar.TabIndex = 1
+        Me.ButtonLimpiar.Text = "Limpiar"
+        Me.ButtonLimpiar.UseVisualStyleBackColor = True
         '
         'ButtonRegistrar
         '
@@ -136,6 +152,26 @@ Partial Class Alumnos
         Me.GridAlumnos.Size = New System.Drawing.Size(696, 165)
         Me.GridAlumnos.TabIndex = 10
         '
+        'Expediente
+        '
+        Me.Expediente.HeaderText = "Expediente"
+        Me.Expediente.Name = "Expediente"
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        '
+        'Apellido
+        '
+        Me.Apellido.HeaderText = "Apellido"
+        Me.Apellido.Name = "Apellido"
+        '
+        'Genero
+        '
+        Me.Genero.HeaderText = "Genero"
+        Me.Genero.Name = "Genero"
+        '
         'LabelGenero
         '
         Me.LabelGenero.Font = New System.Drawing.Font("MS Gothic", 8.0!)
@@ -165,42 +201,6 @@ Partial Class Alumnos
         Me.TxtExpediente.Size = New System.Drawing.Size(294, 20)
         Me.TxtExpediente.TabIndex = 12
         Me.TxtExpediente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Expediente
-        '
-        Me.Expediente.HeaderText = "Expediente"
-        Me.Expediente.Name = "Expediente"
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        '
-        'Apellido
-        '
-        Me.Apellido.HeaderText = "Apellido"
-        Me.Apellido.Name = "Apellido"
-        '
-        'Genero
-        '
-        Me.Genero.HeaderText = "Genero"
-        Me.Genero.Name = "Genero"
-        '
-        'ButtonLimpiar
-        '
-        Me.ButtonLimpiar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonLimpiar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
-        Me.ButtonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLimpiar.ForeColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.Location = New System.Drawing.Point(564, 14)
-        Me.ButtonLimpiar.Name = "ButtonLimpiar"
-        Me.ButtonLimpiar.Size = New System.Drawing.Size(94, 24)
-        Me.ButtonLimpiar.TabIndex = 1
-        Me.ButtonLimpiar.Text = "Limpiar"
-        Me.ButtonLimpiar.UseVisualStyleBackColor = True
         '
         'CB_Genero
         '
