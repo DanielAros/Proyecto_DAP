@@ -22,8 +22,9 @@ Partial Class Registro_Materias
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PanelInferior = New System.Windows.Forms.Panel()
-        Me.ButtonLimpiar = New System.Windows.Forms.Button()
+        Me.ButtonEliminar = New System.Windows.Forms.Button()
         Me.ButtonRegistrar = New System.Windows.Forms.Button()
         Me.LabelTotal = New System.Windows.Forms.Label()
         Me.TxtTotal = New System.Windows.Forms.TextBox()
@@ -39,16 +40,19 @@ Partial Class Registro_Materias
         Me.LabelCorreo = New System.Windows.Forms.Label()
         Me.TxtCorreo = New System.Windows.Forms.TextBox()
         Me.GridMaterias = New System.Windows.Forms.DataGridView()
-        Me.ButtonEliminar = New System.Windows.Forms.Button()
+        Me.ContextMenuStripEliminar = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.LimpiarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ActualizarRegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelInferior.SuspendLayout()
         CType(Me.GridMaterias, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStripEliminar.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelInferior
         '
         Me.PanelInferior.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(74, Byte), Integer))
         Me.PanelInferior.Controls.Add(Me.ButtonEliminar)
-        Me.PanelInferior.Controls.Add(Me.ButtonLimpiar)
         Me.PanelInferior.Controls.Add(Me.ButtonRegistrar)
         Me.PanelInferior.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelInferior.Location = New System.Drawing.Point(0, 407)
@@ -56,21 +60,21 @@ Partial Class Registro_Materias
         Me.PanelInferior.Size = New System.Drawing.Size(794, 50)
         Me.PanelInferior.TabIndex = 40
         '
-        'ButtonLimpiar
+        'ButtonEliminar
         '
-        Me.ButtonLimpiar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.ButtonEliminar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonLimpiar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
-        Me.ButtonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLimpiar.ForeColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.Location = New System.Drawing.Point(450, 13)
-        Me.ButtonLimpiar.Name = "ButtonLimpiar"
-        Me.ButtonLimpiar.Size = New System.Drawing.Size(94, 24)
-        Me.ButtonLimpiar.TabIndex = 1
-        Me.ButtonLimpiar.Text = "Limpiar"
-        Me.ButtonLimpiar.UseVisualStyleBackColor = True
+        Me.ButtonEliminar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ButtonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.ButtonEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.ButtonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonEliminar.ForeColor = System.Drawing.Color.White
+        Me.ButtonEliminar.Location = New System.Drawing.Point(564, 14)
+        Me.ButtonEliminar.Name = "ButtonEliminar"
+        Me.ButtonEliminar.Size = New System.Drawing.Size(94, 24)
+        Me.ButtonEliminar.TabIndex = 2
+        Me.ButtonEliminar.Text = "Eliminar"
+        Me.ButtonEliminar.UseVisualStyleBackColor = True
         '
         'ButtonRegistrar
         '
@@ -229,27 +233,36 @@ Partial Class Registro_Materias
         Me.GridMaterias.Size = New System.Drawing.Size(780, 175)
         Me.GridMaterias.TabIndex = 79
         '
-        'ButtonEliminar
+        'ContextMenuStripEliminar
         '
-        Me.ButtonEliminar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonEliminar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.ButtonEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
-        Me.ButtonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonEliminar.ForeColor = System.Drawing.Color.White
-        Me.ButtonEliminar.Location = New System.Drawing.Point(564, 14)
-        Me.ButtonEliminar.Name = "ButtonEliminar"
-        Me.ButtonEliminar.Size = New System.Drawing.Size(94, 24)
-        Me.ButtonEliminar.TabIndex = 2
-        Me.ButtonEliminar.Text = "Eliminar"
-        Me.ButtonEliminar.UseVisualStyleBackColor = True
+        Me.ContextMenuStripEliminar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LimpiarToolStripMenuItem, Me.EliminarRegistroToolStripMenuItem, Me.ActualizarRegistroToolStripMenuItem})
+        Me.ContextMenuStripEliminar.Name = "ContextMenuStripEliminar"
+        Me.ContextMenuStripEliminar.Size = New System.Drawing.Size(181, 92)
+        '
+        'LimpiarToolStripMenuItem
+        '
+        Me.LimpiarToolStripMenuItem.Name = "LimpiarToolStripMenuItem"
+        Me.LimpiarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LimpiarToolStripMenuItem.Text = "Limpiar"
+        '
+        'EliminarRegistroToolStripMenuItem
+        '
+        Me.EliminarRegistroToolStripMenuItem.Name = "EliminarRegistroToolStripMenuItem"
+        Me.EliminarRegistroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarRegistroToolStripMenuItem.Text = "Eliminar Registro"
+        '
+        'ActualizarRegistroToolStripMenuItem
+        '
+        Me.ActualizarRegistroToolStripMenuItem.Name = "ActualizarRegistroToolStripMenuItem"
+        Me.ActualizarRegistroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ActualizarRegistroToolStripMenuItem.Text = "Actualizar Registro"
         '
         'Registro_Materias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 457)
+        Me.ContextMenuStrip = Me.ContextMenuStripEliminar
         Me.Controls.Add(Me.GridMaterias)
         Me.Controls.Add(Me.LabelCorreo)
         Me.Controls.Add(Me.TxtCorreo)
@@ -270,13 +283,13 @@ Partial Class Registro_Materias
         Me.Text = "Registro_Materias"
         Me.PanelInferior.ResumeLayout(False)
         CType(Me.GridMaterias, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStripEliminar.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents PanelInferior As Panel
-    Friend WithEvents ButtonLimpiar As Button
     Friend WithEvents ButtonRegistrar As Button
     Friend WithEvents LabelTotal As Label
     Friend WithEvents TxtTotal As TextBox
@@ -293,4 +306,8 @@ Partial Class Registro_Materias
     Friend WithEvents TxtCorreo As TextBox
     Friend WithEvents GridMaterias As DataGridView
     Friend WithEvents ButtonEliminar As Button
+    Friend WithEvents ContextMenuStripEliminar As ContextMenuStrip
+    Friend WithEvents LimpiarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarRegistroToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ActualizarRegistroToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -231,5 +231,9 @@ Public Class Iniciar_Sesion
 
     End Sub
 
+    Private Sub Iniciar_Sesion_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+
+    End Sub
+
     'Apuntes: Que es un evento, variable, temporizador, clear. 
 End Class

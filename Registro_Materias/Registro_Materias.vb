@@ -101,17 +101,23 @@ Public Class Registro_Materias
         TxtDescripcion.Clear()
         TxtMaestro.Clear()
         TxtCorreo.Clear()
+        GridMaterias.ClearSelection()
     End Sub
 
-    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) Handles ButtonLimpiar.Click
-        Limpiar_Txt()
-    End Sub
 
     Private Sub Eliminar_Materias()
 
     End Sub
 
     Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click
+
+    End Sub
+
+    Private Sub LimpiarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LimpiarToolStripMenuItem.Click
+        Limpiar_Txt()
+    End Sub
+
+    Private Sub EliminarRegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarRegistroToolStripMenuItem.Click
         Try
             If GridMaterias.SelectedRows.Count = 0 Then
                 '------------Mensaje de Error
@@ -139,5 +145,9 @@ Public Class Registro_Materias
             MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
             '------------------------------------------------------------------------
         End Try
+    End Sub
+
+    Private Sub ActualizarRegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarRegistroToolStripMenuItem.Click
+        Mostrar_Materias()
     End Sub
 End Class
