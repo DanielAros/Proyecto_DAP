@@ -237,24 +237,24 @@ Partial Class Registro_Materias
         '
         Me.ContextMenuStripEliminar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LimpiarToolStripMenuItem, Me.EliminarRegistroToolStripMenuItem, Me.ActualizarRegistroToolStripMenuItem})
         Me.ContextMenuStripEliminar.Name = "ContextMenuStripEliminar"
-        Me.ContextMenuStripEliminar.Size = New System.Drawing.Size(181, 92)
+        Me.ContextMenuStripEliminar.Size = New System.Drawing.Size(173, 70)
         '
         'LimpiarToolStripMenuItem
         '
         Me.LimpiarToolStripMenuItem.Name = "LimpiarToolStripMenuItem"
-        Me.LimpiarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LimpiarToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.LimpiarToolStripMenuItem.Text = "Limpiar"
         '
         'EliminarRegistroToolStripMenuItem
         '
         Me.EliminarRegistroToolStripMenuItem.Name = "EliminarRegistroToolStripMenuItem"
-        Me.EliminarRegistroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarRegistroToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.EliminarRegistroToolStripMenuItem.Text = "Eliminar Registro"
         '
         'ActualizarRegistroToolStripMenuItem
         '
         Me.ActualizarRegistroToolStripMenuItem.Name = "ActualizarRegistroToolStripMenuItem"
-        Me.ActualizarRegistroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ActualizarRegistroToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.ActualizarRegistroToolStripMenuItem.Text = "Actualizar Registro"
         '
         'Registro_Materias

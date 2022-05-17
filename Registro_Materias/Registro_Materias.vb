@@ -148,6 +148,29 @@ Public Class Registro_Materias
     End Sub
 
     Private Sub ActualizarRegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarRegistroToolStripMenuItem.Click
-        Mostrar_Materias()
+
+        Try
+            If GridMaterias.SelectedRows.Count = 0 Then
+                '------------Mensaje de Error
+                MsgBox("No hay ninguna fila seleccionada para actualizar", MsgBoxStyle.Critical, "Registro de Materias")
+            Else
+                Dim Actualizar_Materia As New Actualizar_Materia
+                AddOwnedForm(Actualizar_Materia)
+                Actualizar_Materia.TxtClave.Text = GridMaterias.CurrentRow.Cells(0).Value
+                Actualizar_Materia.TxtMateria.Text = GridMaterias.CurrentRow.Cells(1).Value
+                Actualizar_Materia.Cbo_Semestre.Text = GridMaterias.CurrentRow.Cells(2).Value
+                Actualizar_Materia.TxtDescripcion.Text = GridMaterias.CurrentRow.Cells(3).Value
+                Actualizar_Materia.TxtMaestro.Text = GridMaterias.CurrentRow.Cells(4).Value
+                Actualizar_Materia.TxtCorreo.Text = GridMaterias.CurrentRow.Cells(5).Value
+
+                Actualizar_Materia.ShowDialog()
+
+            End If
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
+
     End Sub
 End Class

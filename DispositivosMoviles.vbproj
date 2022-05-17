@@ -138,6 +138,12 @@
     <Compile Include="Registro Alumno\Registro_Alumno.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registro_Materias\Actualizar_Materia.Designer.vb">
+      <DependentUpon>Actualizar_Materia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Materias\Actualizar_Materia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registro_Materias\Registro_Materias.Designer.vb">
       <DependentUpon>Registro_Materias.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro Alumno\Registro_Alumno.resx">
       <DependentUpon>Registro_Alumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro_Materias\Actualizar_Materia.resx">
+      <DependentUpon>Actualizar_Materia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro_Materias\Registro_Materias.resx">
       <DependentUpon>Registro_Materias.vb</DependentUpon>
