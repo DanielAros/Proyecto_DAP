@@ -8,7 +8,7 @@ Public Class Registro_Materias
     End Sub
 
     '------------------ PROCESO PARA MOSTRAR INFORMACION DE LA TABLA ALUMNOS EN EL DATAGRID
-    Private Sub Mostrar_Materias()
+    Sub Mostrar_Materias()
         Try
             Dim Paquete As New DataSet
             Dim ConsultaSql As String
