@@ -46,9 +46,9 @@ Partial Class Bienvenida
         '
         Me.PBLogo.BackgroundImage = CType(resources.GetObject("PBLogo.BackgroundImage"), System.Drawing.Image)
         Me.PBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBLogo.Location = New System.Drawing.Point(2, 29)
+        Me.PBLogo.Location = New System.Drawing.Point(26, 88)
         Me.PBLogo.Name = "PBLogo"
-        Me.PBLogo.Size = New System.Drawing.Size(180, 280)
+        Me.PBLogo.Size = New System.Drawing.Size(169, 174)
         Me.PBLogo.TabIndex = 8
         Me.PBLogo.TabStop = False
         '
@@ -58,7 +58,7 @@ Partial Class Bienvenida
         Me.LabelTitulo.AutoSize = True
         Me.LabelTitulo.Font = New System.Drawing.Font("Niagara Engraved", 45.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelTitulo.ForeColor = System.Drawing.Color.White
-        Me.LabelTitulo.Location = New System.Drawing.Point(317, 49)
+        Me.LabelTitulo.Location = New System.Drawing.Point(319, 45)
         Me.LabelTitulo.Name = "LabelTitulo"
         Me.LabelTitulo.Size = New System.Drawing.Size(200, 64)
         Me.LabelTitulo.TabIndex = 7
@@ -131,18 +131,18 @@ Partial Class Bienvenida
         '
         Me.LabelNombre.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelNombre.AutoSize = True
-        Me.LabelNombre.Font = New System.Drawing.Font("Niagara Engraved", 30.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNombre.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelNombre.ForeColor = System.Drawing.Color.White
-        Me.LabelNombre.Location = New System.Drawing.Point(234, 113)
+        Me.LabelNombre.Location = New System.Drawing.Point(244, 113)
         Me.LabelNombre.Name = "LabelNombre"
-        Me.LabelNombre.Size = New System.Drawing.Size(90, 43)
+        Me.LabelNombre.Size = New System.Drawing.Size(63, 29)
         Me.LabelNombre.TabIndex = 10
         Me.LabelNombre.Text = "Nombre"
         '
         'ProgressBarCargando
         '
         Me.ProgressBarCargando.ForeColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ProgressBarCargando.Location = New System.Drawing.Point(242, 263)
+        Me.ProgressBarCargando.Location = New System.Drawing.Point(242, 267)
         Me.ProgressBarCargando.Name = "ProgressBarCargando"
         Me.ProgressBarCargando.Size = New System.Drawing.Size(365, 26)
         Me.ProgressBarCargando.Style = System.Windows.Forms.ProgressBarStyle.Continuous
@@ -173,9 +173,9 @@ Partial Class Bienvenida
         '
         Me.LabelCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelCorreo.AutoSize = True
-        Me.LabelCorreo.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelCorreo.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelCorreo.ForeColor = System.Drawing.Color.White
-        Me.LabelCorreo.Location = New System.Drawing.Point(237, 156)
+        Me.LabelCorreo.Location = New System.Drawing.Point(244, 151)
         Me.LabelCorreo.Name = "LabelCorreo"
         Me.LabelCorreo.Size = New System.Drawing.Size(59, 29)
         Me.LabelCorreo.TabIndex = 13
@@ -185,9 +185,9 @@ Partial Class Bienvenida
         '
         Me.LabelApellido.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelApellido.AutoSize = True
-        Me.LabelApellido.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelApellido.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelApellido.ForeColor = System.Drawing.Color.White
-        Me.LabelApellido.Location = New System.Drawing.Point(236, 190)
+        Me.LabelApellido.Location = New System.Drawing.Point(244, 190)
         Me.LabelApellido.Name = "LabelApellido"
         Me.LabelApellido.Size = New System.Drawing.Size(65, 29)
         Me.LabelApellido.TabIndex = 14
@@ -197,9 +197,9 @@ Partial Class Bienvenida
         '
         Me.LabelFacultad.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelFacultad.AutoSize = True
-        Me.LabelFacultad.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFacultad.Font = New System.Drawing.Font("Niagara Engraved", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelFacultad.ForeColor = System.Drawing.Color.White
-        Me.LabelFacultad.Location = New System.Drawing.Point(237, 222)
+        Me.LabelFacultad.Location = New System.Drawing.Point(244, 231)
         Me.LabelFacultad.Name = "LabelFacultad"
         Me.LabelFacultad.Size = New System.Drawing.Size(70, 29)
         Me.LabelFacultad.TabIndex = 15

@@ -22,6 +22,7 @@ Partial Class Formulario_Promedio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LabelCal3 = New System.Windows.Forms.Label()
         Me.TxtCal3 = New System.Windows.Forms.TextBox()
         Me.LabelCal2 = New System.Windows.Forms.Label()
@@ -35,14 +36,16 @@ Partial Class Formulario_Promedio
         Me.LabelPromedio = New System.Windows.Forms.Label()
         Me.TxtPromedio = New System.Windows.Forms.TextBox()
         Me.PanelInferior = New System.Windows.Forms.Panel()
-        Me.ButtonLimpiar = New System.Windows.Forms.Button()
         Me.ButtonCalcular = New System.Windows.Forms.Button()
         Me.LabelFacultad = New System.Windows.Forms.Label()
         Me.TxtFacultad = New System.Windows.Forms.TextBox()
         Me.LabelSemestre = New System.Windows.Forms.Label()
         Me.TxtSemestre = New System.Windows.Forms.TextBox()
         Me.LabelTitulo = New System.Windows.Forms.Label()
+        Me.ContextMenuStripLimpiar = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.LimpiarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelInferior.SuspendLayout()
+        Me.ContextMenuStripLimpiar.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelCal3
@@ -175,29 +178,12 @@ Partial Class Formulario_Promedio
         'PanelInferior
         '
         Me.PanelInferior.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.PanelInferior.Controls.Add(Me.ButtonLimpiar)
         Me.PanelInferior.Controls.Add(Me.ButtonCalcular)
         Me.PanelInferior.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelInferior.Location = New System.Drawing.Point(0, 407)
         Me.PanelInferior.Name = "PanelInferior"
         Me.PanelInferior.Size = New System.Drawing.Size(794, 50)
         Me.PanelInferior.TabIndex = 38
-        '
-        'ButtonLimpiar
-        '
-        Me.ButtonLimpiar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonLimpiar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
-        Me.ButtonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLimpiar.ForeColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.Location = New System.Drawing.Point(558, 14)
-        Me.ButtonLimpiar.Name = "ButtonLimpiar"
-        Me.ButtonLimpiar.Size = New System.Drawing.Size(94, 24)
-        Me.ButtonLimpiar.TabIndex = 1
-        Me.ButtonLimpiar.Text = "Limpiar"
-        Me.ButtonLimpiar.UseVisualStyleBackColor = True
         '
         'ButtonCalcular
         '
@@ -270,11 +256,24 @@ Partial Class Formulario_Promedio
         Me.LabelTitulo.TabIndex = 81
         Me.LabelTitulo.Text = "PROMEDIO CONDICIONAL"
         '
+        'ContextMenuStripLimpiar
+        '
+        Me.ContextMenuStripLimpiar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LimpiarToolStripMenuItem})
+        Me.ContextMenuStripLimpiar.Name = "ContextMenuStripLimpiar"
+        Me.ContextMenuStripLimpiar.Size = New System.Drawing.Size(115, 26)
+        '
+        'LimpiarToolStripMenuItem
+        '
+        Me.LimpiarToolStripMenuItem.Name = "LimpiarToolStripMenuItem"
+        Me.LimpiarToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.LimpiarToolStripMenuItem.Text = "Limpiar"
+        '
         'Formulario_Promedio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 457)
+        Me.ContextMenuStrip = Me.ContextMenuStripLimpiar
         Me.Controls.Add(Me.LabelTitulo)
         Me.Controls.Add(Me.LabelSemestre)
         Me.Controls.Add(Me.TxtSemestre)
@@ -297,6 +296,7 @@ Partial Class Formulario_Promedio
         Me.Name = "Formulario_Promedio"
         Me.Text = "Formulario_Promedio"
         Me.PanelInferior.ResumeLayout(False)
+        Me.ContextMenuStripLimpiar.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -315,11 +315,12 @@ Partial Class Formulario_Promedio
     Friend WithEvents LabelPromedio As Label
     Friend WithEvents TxtPromedio As TextBox
     Friend WithEvents PanelInferior As Panel
-    Friend WithEvents ButtonLimpiar As Button
     Friend WithEvents ButtonCalcular As Button
     Friend WithEvents LabelFacultad As Label
     Friend WithEvents TxtFacultad As TextBox
     Friend WithEvents LabelSemestre As Label
     Friend WithEvents TxtSemestre As TextBox
     Friend WithEvents LabelTitulo As Label
+    Friend WithEvents ContextMenuStripLimpiar As ContextMenuStrip
+    Friend WithEvents LimpiarToolStripMenuItem As ToolStripMenuItem
 End Class

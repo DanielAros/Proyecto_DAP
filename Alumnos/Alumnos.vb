@@ -49,11 +49,15 @@
         CB_Genero.Text = "Selecciona genero"
     End Sub
 
-    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) Handles ButtonLimpiar.Click
+    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) 
         Limpiar_text()
     End Sub
 
     Private Sub GridAlumnos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles GridAlumnos.CellContentClick
 
+    End Sub
+
+    Private Sub LimpiarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LimpiarToolStripMenuItem.Click
+        Limpiar_text()
     End Sub
 End Class

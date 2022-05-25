@@ -1,6 +1,6 @@
 ﻿Public Class Formulario_Promedio
     Private Sub Formulario_Promedio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Limpiar_Txt()
     End Sub
 
     Private Sub ButtonCalcular_Click(sender As Object, e As EventArgs) Handles ButtonCalcular.Click
@@ -56,7 +56,7 @@
         End Try
     End Sub
 
-    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) Handles ButtonLimpiar.Click
+    Private Sub Limpiar_Txt()
         TxtNombre.Clear()
         TxtFacultad.Clear()
         TxtSemestre.Clear()
@@ -69,5 +69,9 @@
 
     Private Sub TxtPromedio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtPromedio.KeyPress
         e.KeyChar = ""
+    End Sub
+
+    Private Sub LimpiarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LimpiarToolStripMenuItem.Click
+        Limpiar_Txt()
     End Sub
 End Class

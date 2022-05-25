@@ -182,15 +182,14 @@ Partial Class Formulario_Principal
         Me.BtnRegistroMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRegistroMateria.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegistroMateria.ForeColor = System.Drawing.Color.White
+        Me.BtnRegistroMateria.Image = CType(resources.GetObject("BtnRegistroMateria.Image"), System.Drawing.Image)
         Me.BtnRegistroMateria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnRegistroMateria.ImageIndex = 1
         Me.BtnRegistroMateria.Location = New System.Drawing.Point(0, 264)
         Me.BtnRegistroMateria.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnRegistroMateria.Name = "BtnRegistroMateria"
         Me.BtnRegistroMateria.Size = New System.Drawing.Size(169, 30)
         Me.BtnRegistroMateria.TabIndex = 12
         Me.BtnRegistroMateria.Text = "REGISTRO MATERIA"
-        Me.BtnRegistroMateria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRegistroMateria.UseVisualStyleBackColor = True
         '
         'BtnRegistroAlumno
@@ -200,15 +199,14 @@ Partial Class Formulario_Principal
         Me.BtnRegistroAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnRegistroAlumno.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRegistroAlumno.ForeColor = System.Drawing.Color.White
+        Me.BtnRegistroAlumno.Image = CType(resources.GetObject("BtnRegistroAlumno.Image"), System.Drawing.Image)
         Me.BtnRegistroAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnRegistroAlumno.ImageIndex = 1
         Me.BtnRegistroAlumno.Location = New System.Drawing.Point(0, 232)
         Me.BtnRegistroAlumno.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnRegistroAlumno.Name = "BtnRegistroAlumno"
         Me.BtnRegistroAlumno.Size = New System.Drawing.Size(169, 30)
         Me.BtnRegistroAlumno.TabIndex = 11
         Me.BtnRegistroAlumno.Text = "REGISTRO ALUMNO"
-        Me.BtnRegistroAlumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRegistroAlumno.UseVisualStyleBackColor = True
         '
         'PromedioCondicional
@@ -218,15 +216,14 @@ Partial Class Formulario_Principal
         Me.PromedioCondicional.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PromedioCondicional.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PromedioCondicional.ForeColor = System.Drawing.Color.White
+        Me.PromedioCondicional.Image = CType(resources.GetObject("PromedioCondicional.Image"), System.Drawing.Image)
         Me.PromedioCondicional.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PromedioCondicional.ImageIndex = 1
         Me.PromedioCondicional.Location = New System.Drawing.Point(3, 200)
         Me.PromedioCondicional.Margin = New System.Windows.Forms.Padding(1)
         Me.PromedioCondicional.Name = "PromedioCondicional"
         Me.PromedioCondicional.Size = New System.Drawing.Size(166, 30)
         Me.PromedioCondicional.TabIndex = 10
         Me.PromedioCondicional.Text = "PROM CONDIC"
-        Me.PromedioCondicional.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.PromedioCondicional.UseVisualStyleBackColor = True
         '
         'PanelLogo
@@ -242,7 +239,7 @@ Partial Class Formulario_Principal
         '
         Me.PBLogo.BackgroundImage = CType(resources.GetObject("PBLogo.BackgroundImage"), System.Drawing.Image)
         Me.PBLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBLogo.Location = New System.Drawing.Point(30, 13)
+        Me.PBLogo.Location = New System.Drawing.Point(48, 13)
         Me.PBLogo.Name = "PBLogo"
         Me.PBLogo.Size = New System.Drawing.Size(78, 74)
         Me.PBLogo.TabIndex = 0
@@ -255,15 +252,14 @@ Partial Class Formulario_Principal
         Me.BtnPromedio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnPromedio.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnPromedio.ForeColor = System.Drawing.Color.White
+        Me.BtnPromedio.Image = CType(resources.GetObject("BtnPromedio.Image"), System.Drawing.Image)
         Me.BtnPromedio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnPromedio.ImageIndex = 1
         Me.BtnPromedio.Location = New System.Drawing.Point(0, 168)
         Me.BtnPromedio.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnPromedio.Name = "BtnPromedio"
         Me.BtnPromedio.Size = New System.Drawing.Size(169, 30)
         Me.BtnPromedio.TabIndex = 2
         Me.BtnPromedio.Text = "PROMEDIO"
-        Me.BtnPromedio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnPromedio.UseVisualStyleBackColor = True
         '
         'BtnAlumnos
@@ -273,15 +269,14 @@ Partial Class Formulario_Principal
         Me.BtnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnAlumnos.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAlumnos.ForeColor = System.Drawing.Color.White
-        Me.BtnAlumnos.ImageAlign = System.Drawing.ContentAlignment.TopRight
-        Me.BtnAlumnos.ImageIndex = 2
+        Me.BtnAlumnos.Image = CType(resources.GetObject("BtnAlumnos.Image"), System.Drawing.Image)
+        Me.BtnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnAlumnos.Location = New System.Drawing.Point(0, 136)
         Me.BtnAlumnos.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnAlumnos.Name = "BtnAlumnos"
         Me.BtnAlumnos.Size = New System.Drawing.Size(169, 30)
         Me.BtnAlumnos.TabIndex = 3
         Me.BtnAlumnos.Text = "ALUMNOS"
-        Me.BtnAlumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnAlumnos.UseVisualStyleBackColor = True
         '
         'BtnInicio
@@ -298,8 +293,7 @@ Partial Class Formulario_Principal
         Me.BtnInicio.Name = "BtnInicio"
         Me.BtnInicio.Size = New System.Drawing.Size(169, 30)
         Me.BtnInicio.TabIndex = 8
-        Me.BtnInicio.Text = "      INICIO"
-        Me.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnInicio.Text = "INICIO"
         Me.BtnInicio.UseVisualStyleBackColor = True
         '
         'LabelCorreo

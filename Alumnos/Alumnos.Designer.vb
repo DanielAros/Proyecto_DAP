@@ -22,13 +22,13 @@ Partial Class Alumnos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.TxtApellido = New System.Windows.Forms.TextBox()
         Me.LabelNombre = New System.Windows.Forms.Label()
         Me.LabelApellido = New System.Windows.Forms.Label()
         Me.LabelTitulo = New System.Windows.Forms.Label()
         Me.PanelInferior = New System.Windows.Forms.Panel()
-        Me.ButtonLimpiar = New System.Windows.Forms.Button()
         Me.ButtonRegistrar = New System.Windows.Forms.Button()
         Me.GridAlumnos = New System.Windows.Forms.DataGridView()
         Me.Expediente = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,8 +39,11 @@ Partial Class Alumnos
         Me.LabelExpediente = New System.Windows.Forms.Label()
         Me.TxtExpediente = New System.Windows.Forms.TextBox()
         Me.CB_Genero = New System.Windows.Forms.ComboBox()
+        Me.ContextMenuStripLimpiar = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.LimpiarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelInferior.SuspendLayout()
         CType(Me.GridAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStripLimpiar.SuspendLayout()
         Me.SuspendLayout()
         '
         'TxtNombre
@@ -97,29 +100,12 @@ Partial Class Alumnos
         'PanelInferior
         '
         Me.PanelInferior.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(74, Byte), Integer))
-        Me.PanelInferior.Controls.Add(Me.ButtonLimpiar)
         Me.PanelInferior.Controls.Add(Me.ButtonRegistrar)
         Me.PanelInferior.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelInferior.Location = New System.Drawing.Point(0, 446)
         Me.PanelInferior.Name = "PanelInferior"
         Me.PanelInferior.Size = New System.Drawing.Size(800, 50)
         Me.PanelInferior.TabIndex = 9
-        '
-        'ButtonLimpiar
-        '
-        Me.ButtonLimpiar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonLimpiar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ButtonLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(75, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(158, Byte), Integer))
-        Me.ButtonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLimpiar.ForeColor = System.Drawing.Color.White
-        Me.ButtonLimpiar.Location = New System.Drawing.Point(564, 14)
-        Me.ButtonLimpiar.Name = "ButtonLimpiar"
-        Me.ButtonLimpiar.Size = New System.Drawing.Size(94, 24)
-        Me.ButtonLimpiar.TabIndex = 1
-        Me.ButtonLimpiar.Text = "Limpiar"
-        Me.ButtonLimpiar.UseVisualStyleBackColor = True
         '
         'ButtonRegistrar
         '
@@ -211,11 +197,24 @@ Partial Class Alumnos
         Me.CB_Genero.Size = New System.Drawing.Size(294, 21)
         Me.CB_Genero.TabIndex = 14
         '
+        'ContextMenuStripLimpiar
+        '
+        Me.ContextMenuStripLimpiar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LimpiarToolStripMenuItem})
+        Me.ContextMenuStripLimpiar.Name = "ContextMenuStripLimpiar"
+        Me.ContextMenuStripLimpiar.Size = New System.Drawing.Size(115, 26)
+        '
+        'LimpiarToolStripMenuItem
+        '
+        Me.LimpiarToolStripMenuItem.Name = "LimpiarToolStripMenuItem"
+        Me.LimpiarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LimpiarToolStripMenuItem.Text = "Limpiar"
+        '
         'Alumnos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 496)
+        Me.ContextMenuStrip = Me.ContextMenuStripLimpiar
         Me.Controls.Add(Me.CB_Genero)
         Me.Controls.Add(Me.LabelExpediente)
         Me.Controls.Add(Me.TxtExpediente)
@@ -232,6 +231,7 @@ Partial Class Alumnos
         Me.Text = "Alumnos"
         Me.PanelInferior.ResumeLayout(False)
         CType(Me.GridAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStripLimpiar.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -252,6 +252,7 @@ Partial Class Alumnos
     Friend WithEvents Genero As DataGridViewTextBoxColumn
     Friend WithEvents LabelExpediente As Label
     Friend WithEvents TxtExpediente As TextBox
-    Friend WithEvents ButtonLimpiar As Button
     Friend WithEvents CB_Genero As ComboBox
+    Friend WithEvents ContextMenuStripLimpiar As ContextMenuStrip
+    Friend WithEvents LimpiarToolStripMenuItem As ToolStripMenuItem
 End Class

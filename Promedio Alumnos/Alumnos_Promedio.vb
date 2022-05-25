@@ -1,6 +1,6 @@
 ﻿Public Class Alumnos_Promedio
     Private Sub Alumnos_Promedio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Limpiar_Txt()
     End Sub
 
     Private Sub ButtonCalcular_Click(sender As Object, e As EventArgs) Handles ButtonCalcular.Click
@@ -47,7 +47,20 @@
 
     End Sub
 
-    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) Handles ButtonLimpiar.Click
+    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub LimpiarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LimpiarToolStripMenuItem.Click
+        Limpiar_Txt()
+    End Sub
+
+    Private Sub Limpiar_Txt()
+        TxtNombre.Text = ""
+        TxtExpediente.Text = ""
+        TxtParcial1.Text = ""
+        txtDos.Text = ""
+        txtTres.Text = ""
+        TextPromedio.Text = ""
     End Sub
 End Class
