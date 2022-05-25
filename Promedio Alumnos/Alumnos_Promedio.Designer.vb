@@ -56,9 +56,10 @@ Partial Class Alumnos_Promedio
         '
         'LabelExpediente
         '
+        Me.LabelExpediente.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelExpediente.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelExpediente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelExpediente.Location = New System.Drawing.Point(73, 82)
+        Me.LabelExpediente.Location = New System.Drawing.Point(73, 139)
         Me.LabelExpediente.Name = "LabelExpediente"
         Me.LabelExpediente.Size = New System.Drawing.Size(195, 18)
         Me.LabelExpediente.TabIndex = 19
@@ -67,7 +68,8 @@ Partial Class Alumnos_Promedio
         '
         'TxtExpediente
         '
-        Me.TxtExpediente.Location = New System.Drawing.Point(75, 103)
+        Me.TxtExpediente.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtExpediente.Location = New System.Drawing.Point(75, 160)
         Me.TxtExpediente.Name = "TxtExpediente"
         Me.TxtExpediente.Size = New System.Drawing.Size(294, 20)
         Me.TxtExpediente.TabIndex = 18
@@ -75,9 +77,10 @@ Partial Class Alumnos_Promedio
         '
         'LabelParcial1
         '
+        Me.LabelParcial1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelParcial1.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelParcial1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelParcial1.Location = New System.Drawing.Point(73, 176)
+        Me.LabelParcial1.Location = New System.Drawing.Point(408, 139)
         Me.LabelParcial1.Name = "LabelParcial1"
         Me.LabelParcial1.Size = New System.Drawing.Size(195, 18)
         Me.LabelParcial1.TabIndex = 17
@@ -86,18 +89,20 @@ Partial Class Alumnos_Promedio
         '
         'LabelNombre
         '
+        Me.LabelNombre.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelNombre.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelNombre.Location = New System.Drawing.Point(73, 128)
+        Me.LabelNombre.Location = New System.Drawing.Point(73, 78)
         Me.LabelNombre.Name = "LabelNombre"
-        Me.LabelNombre.Size = New System.Drawing.Size(195, 18)
+        Me.LabelNombre.Size = New System.Drawing.Size(242, 18)
         Me.LabelNombre.TabIndex = 16
         Me.LabelNombre.Text = "Nombre"
         Me.LabelNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TxtParcial1
         '
-        Me.TxtParcial1.Location = New System.Drawing.Point(75, 197)
+        Me.TxtParcial1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtParcial1.Location = New System.Drawing.Point(410, 160)
         Me.TxtParcial1.Name = "TxtParcial1"
         Me.TxtParcial1.Size = New System.Drawing.Size(294, 20)
         Me.TxtParcial1.TabIndex = 15
@@ -105,17 +110,19 @@ Partial Class Alumnos_Promedio
         '
         'TxtNombre
         '
-        Me.TxtNombre.Location = New System.Drawing.Point(75, 149)
+        Me.TxtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtNombre.Location = New System.Drawing.Point(75, 99)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(294, 20)
+        Me.TxtNombre.Size = New System.Drawing.Size(629, 20)
         Me.TxtNombre.TabIndex = 14
         Me.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'LabelParcial2
         '
+        Me.LabelParcial2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelParcial2.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelParcial2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelParcial2.Location = New System.Drawing.Point(73, 235)
+        Me.LabelParcial2.Location = New System.Drawing.Point(73, 208)
         Me.LabelParcial2.Name = "LabelParcial2"
         Me.LabelParcial2.Size = New System.Drawing.Size(195, 18)
         Me.LabelParcial2.TabIndex = 21
@@ -124,7 +131,8 @@ Partial Class Alumnos_Promedio
         '
         'txtDos
         '
-        Me.txtDos.Location = New System.Drawing.Point(75, 256)
+        Me.txtDos.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtDos.Location = New System.Drawing.Point(75, 229)
         Me.txtDos.Name = "txtDos"
         Me.txtDos.Size = New System.Drawing.Size(294, 20)
         Me.txtDos.TabIndex = 20
@@ -132,9 +140,10 @@ Partial Class Alumnos_Promedio
         '
         'LabelParcial3
         '
+        Me.LabelParcial3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelParcial3.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelParcial3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelParcial3.Location = New System.Drawing.Point(73, 294)
+        Me.LabelParcial3.Location = New System.Drawing.Point(408, 208)
         Me.LabelParcial3.Name = "LabelParcial3"
         Me.LabelParcial3.Size = New System.Drawing.Size(195, 18)
         Me.LabelParcial3.TabIndex = 23
@@ -143,7 +152,8 @@ Partial Class Alumnos_Promedio
         '
         'txtTres
         '
-        Me.txtTres.Location = New System.Drawing.Point(75, 315)
+        Me.txtTres.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.txtTres.Location = New System.Drawing.Point(410, 229)
         Me.txtTres.Name = "txtTres"
         Me.txtTres.Size = New System.Drawing.Size(294, 20)
         Me.txtTres.TabIndex = 22
@@ -151,21 +161,23 @@ Partial Class Alumnos_Promedio
         '
         'LabelPromedio
         '
+        Me.LabelPromedio.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelPromedio.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelPromedio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelPromedio.Location = New System.Drawing.Point(455, 376)
+        Me.LabelPromedio.Location = New System.Drawing.Point(292, 292)
         Me.LabelPromedio.Name = "LabelPromedio"
-        Me.LabelPromedio.Size = New System.Drawing.Size(195, 18)
+        Me.LabelPromedio.Size = New System.Drawing.Size(141, 18)
         Me.LabelPromedio.TabIndex = 25
         Me.LabelPromedio.Text = "Promedio"
         Me.LabelPromedio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextPromedio
         '
-        Me.TextPromedio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextPromedio.Location = New System.Drawing.Point(457, 397)
+        Me.TextPromedio.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextPromedio.Location = New System.Drawing.Point(294, 313)
         Me.TextPromedio.Name = "TextPromedio"
-        Me.TextPromedio.Size = New System.Drawing.Size(294, 20)
+        Me.TextPromedio.ReadOnly = True
+        Me.TextPromedio.Size = New System.Drawing.Size(240, 20)
         Me.TextPromedio.TabIndex = 24
         Me.TextPromedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '

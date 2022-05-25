@@ -31,6 +31,7 @@ Partial Class Formulario_Principal
         Me.ButtonMinimizar = New System.Windows.Forms.Button()
         Me.ButtonSalir = New System.Windows.Forms.Button()
         Me.PanelBarraMenu = New System.Windows.Forms.Panel()
+        Me.BtnRegistroMateria = New System.Windows.Forms.Button()
         Me.BtnRegistroAlumno = New System.Windows.Forms.Button()
         Me.PromedioCondicional = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
@@ -47,7 +48,6 @@ Partial Class Formulario_Principal
         Me.LabelHora = New System.Windows.Forms.Label()
         Me.LabelBienvenido = New System.Windows.Forms.Label()
         Me.TimerHora = New System.Windows.Forms.Timer(Me.components)
-        Me.BtnRegistroMateria = New System.Windows.Forms.Button()
         Me.PanelBarraTitutlo.SuspendLayout()
         Me.PanelBarraMenu.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
@@ -172,8 +172,26 @@ Partial Class Formulario_Principal
         Me.PanelBarraMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelBarraMenu.Location = New System.Drawing.Point(0, 25)
         Me.PanelBarraMenu.Name = "PanelBarraMenu"
-        Me.PanelBarraMenu.Size = New System.Drawing.Size(136, 387)
+        Me.PanelBarraMenu.Size = New System.Drawing.Size(170, 387)
         Me.PanelBarraMenu.TabIndex = 4
+        '
+        'BtnRegistroMateria
+        '
+        Me.BtnRegistroMateria.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnRegistroMateria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BtnRegistroMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRegistroMateria.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRegistroMateria.ForeColor = System.Drawing.Color.White
+        Me.BtnRegistroMateria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnRegistroMateria.ImageIndex = 1
+        Me.BtnRegistroMateria.Location = New System.Drawing.Point(0, 264)
+        Me.BtnRegistroMateria.Margin = New System.Windows.Forms.Padding(1)
+        Me.BtnRegistroMateria.Name = "BtnRegistroMateria"
+        Me.BtnRegistroMateria.Size = New System.Drawing.Size(169, 30)
+        Me.BtnRegistroMateria.TabIndex = 12
+        Me.BtnRegistroMateria.Text = "REGISTRO MATERIA"
+        Me.BtnRegistroMateria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnRegistroMateria.UseVisualStyleBackColor = True
         '
         'BtnRegistroAlumno
         '
@@ -187,7 +205,7 @@ Partial Class Formulario_Principal
         Me.BtnRegistroAlumno.Location = New System.Drawing.Point(0, 232)
         Me.BtnRegistroAlumno.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnRegistroAlumno.Name = "BtnRegistroAlumno"
-        Me.BtnRegistroAlumno.Size = New System.Drawing.Size(136, 30)
+        Me.BtnRegistroAlumno.Size = New System.Drawing.Size(169, 30)
         Me.BtnRegistroAlumno.TabIndex = 11
         Me.BtnRegistroAlumno.Text = "REGISTRO ALUMNO"
         Me.BtnRegistroAlumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -205,7 +223,7 @@ Partial Class Formulario_Principal
         Me.PromedioCondicional.Location = New System.Drawing.Point(3, 200)
         Me.PromedioCondicional.Margin = New System.Windows.Forms.Padding(1)
         Me.PromedioCondicional.Name = "PromedioCondicional"
-        Me.PromedioCondicional.Size = New System.Drawing.Size(136, 30)
+        Me.PromedioCondicional.Size = New System.Drawing.Size(166, 30)
         Me.PromedioCondicional.TabIndex = 10
         Me.PromedioCondicional.Text = "PROM CONDIC"
         Me.PromedioCondicional.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -217,7 +235,7 @@ Partial Class Formulario_Principal
         Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
         Me.PanelLogo.Name = "PanelLogo"
-        Me.PanelLogo.Size = New System.Drawing.Size(136, 100)
+        Me.PanelLogo.Size = New System.Drawing.Size(170, 100)
         Me.PanelLogo.TabIndex = 9
         '
         'PBLogo
@@ -242,7 +260,7 @@ Partial Class Formulario_Principal
         Me.BtnPromedio.Location = New System.Drawing.Point(0, 168)
         Me.BtnPromedio.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnPromedio.Name = "BtnPromedio"
-        Me.BtnPromedio.Size = New System.Drawing.Size(136, 30)
+        Me.BtnPromedio.Size = New System.Drawing.Size(169, 30)
         Me.BtnPromedio.TabIndex = 2
         Me.BtnPromedio.Text = "PROMEDIO"
         Me.BtnPromedio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -260,7 +278,7 @@ Partial Class Formulario_Principal
         Me.BtnAlumnos.Location = New System.Drawing.Point(0, 136)
         Me.BtnAlumnos.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnAlumnos.Name = "BtnAlumnos"
-        Me.BtnAlumnos.Size = New System.Drawing.Size(136, 30)
+        Me.BtnAlumnos.Size = New System.Drawing.Size(169, 30)
         Me.BtnAlumnos.TabIndex = 3
         Me.BtnAlumnos.Text = "ALUMNOS"
         Me.BtnAlumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -278,7 +296,7 @@ Partial Class Formulario_Principal
         Me.BtnInicio.Location = New System.Drawing.Point(0, 104)
         Me.BtnInicio.Margin = New System.Windows.Forms.Padding(1)
         Me.BtnInicio.Name = "BtnInicio"
-        Me.BtnInicio.Size = New System.Drawing.Size(136, 30)
+        Me.BtnInicio.Size = New System.Drawing.Size(169, 30)
         Me.BtnInicio.TabIndex = 8
         Me.BtnInicio.Text = "      INICIO"
         Me.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -289,7 +307,7 @@ Partial Class Formulario_Principal
         Me.LabelCorreo.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.LabelCorreo.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelCorreo.ForeColor = System.Drawing.SystemColors.Control
-        Me.LabelCorreo.Location = New System.Drawing.Point(0, 349)
+        Me.LabelCorreo.Location = New System.Drawing.Point(17, 349)
         Me.LabelCorreo.Name = "LabelCorreo"
         Me.LabelCorreo.Size = New System.Drawing.Size(136, 21)
         Me.LabelCorreo.TabIndex = 6
@@ -301,7 +319,7 @@ Partial Class Formulario_Principal
         Me.LabelNombreFacultad.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.LabelNombreFacultad.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelNombreFacultad.ForeColor = System.Drawing.SystemColors.Control
-        Me.LabelNombreFacultad.Location = New System.Drawing.Point(0, 331)
+        Me.LabelNombreFacultad.Location = New System.Drawing.Point(17, 331)
         Me.LabelNombreFacultad.Name = "LabelNombreFacultad"
         Me.LabelNombreFacultad.Size = New System.Drawing.Size(136, 18)
         Me.LabelNombreFacultad.TabIndex = 7
@@ -313,7 +331,7 @@ Partial Class Formulario_Principal
         Me.LabelNombre.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.LabelNombre.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelNombre.ForeColor = System.Drawing.SystemColors.Control
-        Me.LabelNombre.Location = New System.Drawing.Point(0, 313)
+        Me.LabelNombre.Location = New System.Drawing.Point(17, 313)
         Me.LabelNombre.Name = "LabelNombre"
         Me.LabelNombre.Size = New System.Drawing.Size(136, 18)
         Me.LabelNombre.TabIndex = 5
@@ -325,7 +343,7 @@ Partial Class Formulario_Principal
         Me.LabelTipoUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.LabelTipoUsuario.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelTipoUsuario.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.LabelTipoUsuario.Location = New System.Drawing.Point(0, 295)
+        Me.LabelTipoUsuario.Location = New System.Drawing.Point(17, 295)
         Me.LabelTipoUsuario.Name = "LabelTipoUsuario"
         Me.LabelTipoUsuario.Size = New System.Drawing.Size(136, 23)
         Me.LabelTipoUsuario.TabIndex = 4
@@ -339,9 +357,9 @@ Partial Class Formulario_Principal
         Me.PanelContenedor.Controls.Add(Me.LabelHora)
         Me.PanelContenedor.Controls.Add(Me.LabelBienvenido)
         Me.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContenedor.Location = New System.Drawing.Point(136, 25)
+        Me.PanelContenedor.Location = New System.Drawing.Point(170, 25)
         Me.PanelContenedor.Name = "PanelContenedor"
-        Me.PanelContenedor.Size = New System.Drawing.Size(569, 387)
+        Me.PanelContenedor.Size = New System.Drawing.Size(535, 387)
         Me.PanelContenedor.TabIndex = 5
         '
         'LabelFecha
@@ -351,7 +369,7 @@ Partial Class Formulario_Principal
         Me.LabelFecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LabelFecha.Font = New System.Drawing.Font("MS PGothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelFecha.ForeColor = System.Drawing.Color.White
-        Me.LabelFecha.Location = New System.Drawing.Point(146, 179)
+        Me.LabelFecha.Location = New System.Drawing.Point(129, 179)
         Me.LabelFecha.Name = "LabelFecha"
         Me.LabelFecha.Size = New System.Drawing.Size(258, 19)
         Me.LabelFecha.TabIndex = 2
@@ -364,7 +382,7 @@ Partial Class Formulario_Principal
         Me.LabelHora.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LabelHora.Font = New System.Drawing.Font("MS PGothic", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelHora.ForeColor = System.Drawing.Color.White
-        Me.LabelHora.Location = New System.Drawing.Point(213, 130)
+        Me.LabelHora.Location = New System.Drawing.Point(196, 130)
         Me.LabelHora.Name = "LabelHora"
         Me.LabelHora.Size = New System.Drawing.Size(123, 29)
         Me.LabelHora.TabIndex = 1
@@ -377,7 +395,7 @@ Partial Class Formulario_Principal
         Me.LabelBienvenido.BackColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.LabelBienvenido.Font = New System.Drawing.Font("MS PGothic", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelBienvenido.ForeColor = System.Drawing.Color.White
-        Me.LabelBienvenido.Location = New System.Drawing.Point(463, 352)
+        Me.LabelBienvenido.Location = New System.Drawing.Point(429, 352)
         Me.LabelBienvenido.Name = "LabelBienvenido"
         Me.LabelBienvenido.Size = New System.Drawing.Size(94, 13)
         Me.LabelBienvenido.TabIndex = 0
@@ -386,24 +404,6 @@ Partial Class Formulario_Principal
         'TimerHora
         '
         Me.TimerHora.Enabled = True
-        '
-        'BtnRegistroMateria
-        '
-        Me.BtnRegistroMateria.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnRegistroMateria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(48, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BtnRegistroMateria.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnRegistroMateria.Font = New System.Drawing.Font("MS PGothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRegistroMateria.ForeColor = System.Drawing.Color.White
-        Me.BtnRegistroMateria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnRegistroMateria.ImageIndex = 1
-        Me.BtnRegistroMateria.Location = New System.Drawing.Point(0, 264)
-        Me.BtnRegistroMateria.Margin = New System.Windows.Forms.Padding(1)
-        Me.BtnRegistroMateria.Name = "BtnRegistroMateria"
-        Me.BtnRegistroMateria.Size = New System.Drawing.Size(136, 30)
-        Me.BtnRegistroMateria.TabIndex = 12
-        Me.BtnRegistroMateria.Text = "REGISTRO MATERIA"
-        Me.BtnRegistroMateria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnRegistroMateria.UseVisualStyleBackColor = True
         '
         'Formulario_Principal
         '

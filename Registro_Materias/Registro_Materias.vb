@@ -109,10 +109,6 @@ Public Class Registro_Materias
 
     End Sub
 
-    Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click
-
-    End Sub
-
     Private Sub LimpiarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LimpiarToolStripMenuItem.Click
         Limpiar_Txt()
     End Sub

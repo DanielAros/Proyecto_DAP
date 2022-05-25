@@ -8,7 +8,7 @@ Public Class Registro_Alumno
     End Sub
 
     '------------------ PROCESO PARA MOSTRAR INFORMACION DE LA TABLA ALUMNOS EN EL DATAGRID
-    Private Sub Mostrar_Alumnos()
+    Sub Mostrar_Alumnos()
         Try
             Dim Paquete As New DataSet
             Dim ConsultaSql As String
@@ -120,10 +120,6 @@ Public Class Registro_Alumno
         Cbo_Semestre.Text = "Selecciona Semestre"
     End Sub
 
-    Private Sub ButtonLimpiar_Click(sender As Object, e As EventArgs) Handles ButtonLimpiar.Click
-        Limpiar_Txt()
-    End Sub
-
     Private Sub Buscar_Expediente()
         Try
             Dim Adaptador As New OleDbDataAdapter
@@ -155,5 +151,64 @@ Public Class Registro_Alumno
 
     Private Sub TxtExpediente_Leave(sender As Object, e As EventArgs) Handles TxtExpediente.Leave
         Buscar_Expediente()
+    End Sub
+
+    Private Sub EliminarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem.Click
+        Limpiar_Txt()
+    End Sub
+
+    Private Sub EliminarToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EliminarToolStripMenuItem1.Click
+        Try
+            If GridAlumnos.SelectedRows.Count = 0 Then
+                '------------Mensaje de Error
+                MsgBox("No hay ninguna fila seleccionada para eliminar", MsgBoxStyle.Critical, "Registro de Alumnos")
+            Else
+                Dim Respuesta As DialogResult = MessageBox.Show("Se eliminar las filas seleccionadas, ¿Deseas continuar con la operacion?", "Registro Materias", MessageBoxButtons.YesNo)
+
+                If Respuesta = DialogResult.Yes Then
+                    Dim cmdDelete = New OleDbCommand
+                    For Each Row As DataGridViewRow In GridAlumnos.SelectedRows
+                        Dim Expediente As Double = Row.Cells("Expediente").Value
+                        cmdDelete.Connection = Conexion
+                        cmdDelete.CommandText = "DELETE FROM Alumnos Where Expediente = " & Expediente
+                        cmdDelete.ExecuteNonQuery()
+                    Next
+                    Mostrar_Alumnos()
+                ElseIf Respuesta = DialogResult.No Then
+                    'Instrucciones en blanco
+
+                End If
+            End If
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
+    End Sub
+
+    Private Sub ActualizarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ActualizarToolStripMenuItem.Click
+        Try
+            If GridAlumnos.SelectedRows.Count = 0 Then
+                '------------Mensaje de Error
+                MsgBox("No hay ninguna fila seleccionada para actualizar", MsgBoxStyle.Critical, "Registro de Alumnos")
+            Else
+                Dim Actualizar_Alumno As New Actualizar_Alumno
+                AddOwnedForm(Actualizar_Alumno)
+                Actualizar_Alumno.TxtExpediente.Text = GridAlumnos.CurrentRow.Cells(0).Value
+                Actualizar_Alumno.TxtNombre.Text = GridAlumnos.CurrentRow.Cells(1).Value
+                Actualizar_Alumno.TxtApellido.Text = GridAlumnos.CurrentRow.Cells(2).Value
+                Actualizar_Alumno.Cbo_Genero.Text = GridAlumnos.CurrentRow.Cells(3).Value
+                Actualizar_Alumno.TxtFecha.Text = GridAlumnos.CurrentRow.Cells(4).Value
+                Actualizar_Alumno.TxtDireccion.Text = GridAlumnos.CurrentRow.Cells(5).Value
+                Actualizar_Alumno.Cbo_Facultad.Text = GridAlumnos.CurrentRow.Cells(6).Value
+                Actualizar_Alumno.Cbo_Semestre.Text = GridAlumnos.CurrentRow.Cells(7).Value
+
+                Actualizar_Alumno.ShowDialog()
+            End If
+        Catch ex As Exception
+            '-----------------MENSAJE DE ERROR---------------------------------------
+            MsgBox("Error de operación: " & ex.Message, MsgBoxStyle.Critical)
+            '------------------------------------------------------------------------
+        End Try
     End Sub
 End Class

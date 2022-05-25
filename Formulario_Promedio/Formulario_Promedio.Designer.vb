@@ -41,14 +41,16 @@ Partial Class Formulario_Promedio
         Me.TxtFacultad = New System.Windows.Forms.TextBox()
         Me.LabelSemestre = New System.Windows.Forms.Label()
         Me.TxtSemestre = New System.Windows.Forms.TextBox()
+        Me.LabelTitulo = New System.Windows.Forms.Label()
         Me.PanelInferior.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabelCal3
         '
+        Me.LabelCal3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelCal3.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelCal3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelCal3.Location = New System.Drawing.Point(51, 262)
+        Me.LabelCal3.Location = New System.Drawing.Point(91, 262)
         Me.LabelCal3.Name = "LabelCal3"
         Me.LabelCal3.Size = New System.Drawing.Size(195, 18)
         Me.LabelCal3.TabIndex = 33
@@ -57,7 +59,8 @@ Partial Class Formulario_Promedio
         '
         'TxtCal3
         '
-        Me.TxtCal3.Location = New System.Drawing.Point(52, 279)
+        Me.TxtCal3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtCal3.Location = New System.Drawing.Point(92, 279)
         Me.TxtCal3.Name = "TxtCal3"
         Me.TxtCal3.Size = New System.Drawing.Size(273, 20)
         Me.TxtCal3.TabIndex = 32
@@ -65,9 +68,10 @@ Partial Class Formulario_Promedio
         '
         'LabelCal2
         '
+        Me.LabelCal2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelCal2.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelCal2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelCal2.Location = New System.Drawing.Point(51, 196)
+        Me.LabelCal2.Location = New System.Drawing.Point(411, 198)
         Me.LabelCal2.Name = "LabelCal2"
         Me.LabelCal2.Size = New System.Drawing.Size(195, 18)
         Me.LabelCal2.TabIndex = 31
@@ -76,7 +80,8 @@ Partial Class Formulario_Promedio
         '
         'TxtCal2
         '
-        Me.TxtCal2.Location = New System.Drawing.Point(52, 212)
+        Me.TxtCal2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtCal2.Location = New System.Drawing.Point(412, 214)
         Me.TxtCal2.Name = "TxtCal2"
         Me.TxtCal2.Size = New System.Drawing.Size(273, 20)
         Me.TxtCal2.TabIndex = 30
@@ -84,9 +89,10 @@ Partial Class Formulario_Promedio
         '
         'LabelCal1
         '
+        Me.LabelCal1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelCal1.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelCal1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelCal1.Location = New System.Drawing.Point(50, 133)
+        Me.LabelCal1.Location = New System.Drawing.Point(92, 197)
         Me.LabelCal1.Name = "LabelCal1"
         Me.LabelCal1.Size = New System.Drawing.Size(195, 18)
         Me.LabelCal1.TabIndex = 27
@@ -95,9 +101,10 @@ Partial Class Formulario_Promedio
         '
         'LabelNombre
         '
+        Me.LabelNombre.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelNombre.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelNombre.Location = New System.Drawing.Point(49, 19)
+        Me.LabelNombre.Location = New System.Drawing.Point(91, 83)
         Me.LabelNombre.Name = "LabelNombre"
         Me.LabelNombre.Size = New System.Drawing.Size(156, 14)
         Me.LabelNombre.TabIndex = 26
@@ -106,7 +113,8 @@ Partial Class Formulario_Promedio
         '
         'TxtCal1
         '
-        Me.TxtCal1.Location = New System.Drawing.Point(51, 150)
+        Me.TxtCal1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtCal1.Location = New System.Drawing.Point(93, 214)
         Me.TxtCal1.Name = "TxtCal1"
         Me.TxtCal1.Size = New System.Drawing.Size(273, 20)
         Me.TxtCal1.TabIndex = 25
@@ -114,17 +122,19 @@ Partial Class Formulario_Promedio
         '
         'TxtNombre
         '
-        Me.TxtNombre.Location = New System.Drawing.Point(50, 35)
+        Me.TxtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtNombre.Location = New System.Drawing.Point(92, 99)
         Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(273, 20)
+        Me.TxtNombre.Size = New System.Drawing.Size(593, 20)
         Me.TxtNombre.TabIndex = 24
         Me.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'LabelCal4
         '
+        Me.LabelCal4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelCal4.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelCal4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelCal4.Location = New System.Drawing.Point(49, 335)
+        Me.LabelCal4.Location = New System.Drawing.Point(412, 262)
         Me.LabelCal4.Name = "LabelCal4"
         Me.LabelCal4.Size = New System.Drawing.Size(195, 18)
         Me.LabelCal4.TabIndex = 35
@@ -133,7 +143,8 @@ Partial Class Formulario_Promedio
         '
         'TxtCal4
         '
-        Me.TxtCal4.Location = New System.Drawing.Point(50, 352)
+        Me.TxtCal4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtCal4.Location = New System.Drawing.Point(413, 279)
         Me.TxtCal4.Name = "TxtCal4"
         Me.TxtCal4.Size = New System.Drawing.Size(273, 20)
         Me.TxtCal4.TabIndex = 34
@@ -141,10 +152,10 @@ Partial Class Formulario_Promedio
         '
         'LabelPromedio
         '
-        Me.LabelPromedio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LabelPromedio.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelPromedio.Font = New System.Drawing.Font("MS Gothic", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelPromedio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelPromedio.Location = New System.Drawing.Point(448, 183)
+        Me.LabelPromedio.Location = New System.Drawing.Point(274, 335)
         Me.LabelPromedio.Name = "LabelPromedio"
         Me.LabelPromedio.Size = New System.Drawing.Size(156, 14)
         Me.LabelPromedio.TabIndex = 37
@@ -153,9 +164,10 @@ Partial Class Formulario_Promedio
         '
         'TxtPromedio
         '
-        Me.TxtPromedio.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TxtPromedio.Location = New System.Drawing.Point(451, 200)
+        Me.TxtPromedio.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtPromedio.Location = New System.Drawing.Point(277, 352)
         Me.TxtPromedio.Name = "TxtPromedio"
+        Me.TxtPromedio.ReadOnly = True
         Me.TxtPromedio.Size = New System.Drawing.Size(317, 20)
         Me.TxtPromedio.TabIndex = 36
         Me.TxtPromedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -205,9 +217,10 @@ Partial Class Formulario_Promedio
         '
         'LabelFacultad
         '
+        Me.LabelFacultad.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelFacultad.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelFacultad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelFacultad.Location = New System.Drawing.Point(369, 19)
+        Me.LabelFacultad.Location = New System.Drawing.Point(411, 142)
         Me.LabelFacultad.Name = "LabelFacultad"
         Me.LabelFacultad.Size = New System.Drawing.Size(156, 14)
         Me.LabelFacultad.TabIndex = 40
@@ -216,7 +229,8 @@ Partial Class Formulario_Promedio
         '
         'TxtFacultad
         '
-        Me.TxtFacultad.Location = New System.Drawing.Point(370, 35)
+        Me.TxtFacultad.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtFacultad.Location = New System.Drawing.Point(412, 158)
         Me.TxtFacultad.Name = "TxtFacultad"
         Me.TxtFacultad.Size = New System.Drawing.Size(273, 20)
         Me.TxtFacultad.TabIndex = 39
@@ -224,9 +238,10 @@ Partial Class Formulario_Promedio
         '
         'LabelSemestre
         '
+        Me.LabelSemestre.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LabelSemestre.Font = New System.Drawing.Font("MS Gothic", 8.0!)
         Me.LabelSemestre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.LabelSemestre.Location = New System.Drawing.Point(49, 78)
+        Me.LabelSemestre.Location = New System.Drawing.Point(91, 142)
         Me.LabelSemestre.Name = "LabelSemestre"
         Me.LabelSemestre.Size = New System.Drawing.Size(156, 14)
         Me.LabelSemestre.TabIndex = 42
@@ -235,17 +250,32 @@ Partial Class Formulario_Promedio
         '
         'TxtSemestre
         '
-        Me.TxtSemestre.Location = New System.Drawing.Point(50, 94)
+        Me.TxtSemestre.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtSemestre.Location = New System.Drawing.Point(92, 158)
         Me.TxtSemestre.Name = "TxtSemestre"
         Me.TxtSemestre.Size = New System.Drawing.Size(273, 20)
         Me.TxtSemestre.TabIndex = 41
         Me.TxtSemestre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'LabelTitulo
+        '
+        Me.LabelTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelTitulo.AutoSize = True
+        Me.LabelTitulo.BackColor = System.Drawing.SystemColors.Control
+        Me.LabelTitulo.Font = New System.Drawing.Font("MS PGothic", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTitulo.ForeColor = System.Drawing.Color.Black
+        Me.LabelTitulo.Location = New System.Drawing.Point(257, 28)
+        Me.LabelTitulo.Name = "LabelTitulo"
+        Me.LabelTitulo.Size = New System.Drawing.Size(247, 19)
+        Me.LabelTitulo.TabIndex = 81
+        Me.LabelTitulo.Text = "PROMEDIO CONDICIONAL"
         '
         'Formulario_Promedio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 457)
+        Me.Controls.Add(Me.LabelTitulo)
         Me.Controls.Add(Me.LabelSemestre)
         Me.Controls.Add(Me.TxtSemestre)
         Me.Controls.Add(Me.LabelFacultad)
@@ -291,4 +321,5 @@ Partial Class Formulario_Promedio
     Friend WithEvents TxtFacultad As TextBox
     Friend WithEvents LabelSemestre As Label
     Friend WithEvents TxtSemestre As TextBox
+    Friend WithEvents LabelTitulo As Label
 End Class

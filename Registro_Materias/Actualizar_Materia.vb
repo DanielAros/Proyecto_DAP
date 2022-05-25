@@ -17,10 +17,6 @@ Public Class Actualizar_Materia
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub PanelBarraTitutlo_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelBarraTitutlo.MouseDown
-
-    End Sub
-
     '//**************************************************************
     '// Librearias y eventos para poder mover de lugar el formulario
     '//**************************************************************
@@ -28,12 +24,23 @@ Public Class Actualizar_Materia
     Private Shared Sub ReleaseCapture()
     End Sub
 
-    Private Sub Actualizar_Materia_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
+    End Sub
 
+    Private Sub PanelBarraTitutlo_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelBarraTitutlo.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+    Private Sub Actualizar_Materia_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
     Private Sub PanelInferior_MouseDown(sender As Object, e As MouseEventArgs) Handles PanelInferior.MouseDown
-
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
     Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
